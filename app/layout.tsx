@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import CampaignHeader from "./components/CampaignHeader";
 import CampaignFooter from "./components/CampaignFooter";
 import CampaignDivider from "./components/CampaignDivider";
@@ -33,6 +34,8 @@ export default function RootLayout({
 
         <CampaignDivider />
         <CampaignFooter />
+
+        <Analytics />
       </body>
     </html>
   );
