@@ -151,7 +151,7 @@ export default function GetInvolvedPage() {
                   href="/donate"
                   className="rounded border border-[#F2E6C9]/70 bg-[#F2E6C9] px-7 py-4 text-center text-sm font-black uppercase text-[#050505] transition hover:-translate-y-1 hover:bg-white"
                 >
-                  Donation Status
+                  Donations
                 </Link>
               </div>
             </Reveal>
