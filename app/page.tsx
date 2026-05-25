@@ -1,3 +1,4 @@
+import ElectionCountdown from "./components/ElectionCountdown";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -149,7 +150,7 @@ export default function MyronLizerCampaignPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_28%,rgba(255,90,54,0.24),transparent_34%)]" />
         </div>
 
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:py-16">
+        <div className="relative mx-auto grid max-w-7xl gap-10 overflow-hidden px-5 py-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:overflow-visible lg:py-16">
           <div>
             <Reveal>
               <p className="text-sm font-black uppercase tracking-[0.28em] text-[#FF5A36]">
@@ -158,9 +159,9 @@ export default function MyronLizerCampaignPage() {
             </Reveal>
 
             <Reveal delay={0.08}>
-              <h1 className="mt-5 max-w-4xl text-5xl font-black uppercase leading-[0.92] text-[#FFF3D6] md:text-6xl lg:text-7xl">
-                Economic Sovereignty. Stronger Communities.
-              </h1>
+              <h1 className="mt-5 max-w-full break-words text-[3.15rem] font-black uppercase leading-[0.92] tracking-[-0.04em] text-[#FFF3D6] sm:text-6xl lg:text-7xl">
+  Economic Sovereignty. Stronger Communities.
+</h1>
             </Reveal>
 
             <Reveal delay={0.14}>
@@ -194,7 +195,7 @@ export default function MyronLizerCampaignPage() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.16} className="relative mx-auto w-full max-w-xl">
+          <Reveal delay={0.16} className="relative mx-auto w-full max-w-xl overflow-hidden">
             <div className="absolute -bottom-8 left-8 right-8 h-28 rounded-full bg-[#FF5A36]/20 blur-3xl" />
             <div className="absolute -top-8 right-10 h-40 w-40 rounded-full bg-[#F2E6C9]/10 blur-3xl" />
 
@@ -205,13 +206,14 @@ export default function MyronLizerCampaignPage() {
   height={700}
   priority
   loading="eager"
-  className="relative h-[380px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_28%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] lg:h-[520px]"
+ className="relative h-[320px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_28%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] sm:h-[380px] lg:h-[520px]"
 />
           </Reveal>
         </div>
 
         <CampaignDivider />
       </section>
+            <ElectionCountdown />
 
       <section className="bg-[#F2E6C9] px-5 py-20 text-[#050505]">
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">

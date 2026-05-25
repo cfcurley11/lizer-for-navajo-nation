@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
-  ArrowUpRight,
+  ArrowRight,
   CheckCircle,
+  CreditCard,
   Heart,
   Landmark,
   Megaphone,
@@ -11,15 +12,16 @@ import {
   Users,
 } from "lucide-react";
 import CampaignDivider from "../components/CampaignDivider";
+import Reveal from "../components/Reveal";
 
 export const metadata: Metadata = {
   title: "Donate | Myron Lizer for Navajo Nation President",
   description:
-    "Support Myron Lizer for Navajo Nation President. Contributions help campaign outreach, events, communications, travel, media, and voter engagement.",
+    "Support Myron Lizer for Navajo Nation President. Direct online donations are forthcoming. Supporters may contact the campaign for contribution information.",
   openGraph: {
     title: "Donate | Myron Lizer for Navajo Nation President",
     description:
-      "Support campaign outreach, events, communications, travel, media, and voter engagement.",
+      "Direct online donations are forthcoming. Supporters may contact the campaign for contribution information.",
     images: ["/images/myron-lizer/myron-about-leadership.jpg"],
   },
 };
@@ -49,6 +51,13 @@ const supportAreas = [
   },
 ];
 
+const campaignSupportItems = [
+  "Support campaign travel and community outreach",
+  "Help print signs, flyers, materials, and visibility items",
+  "Strengthen event coordination and voter engagement",
+  "Expand digital communications and campaign updates",
+];
+
 export default function DonatePage() {
   return (
     <main className="min-h-screen bg-[#050505] text-[#FFF3D6]">
@@ -69,47 +78,59 @@ export default function DonatePage() {
 
         <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:py-14">
           <div>
-            <Link
-              href="/"
-              className="inline-flex text-xs font-black uppercase tracking-[0.2em] text-[#F2E6C9]/60 transition hover:text-[#FF5A36]"
-            >
-              ← Back to Home
-            </Link>
-
-            <p className="mt-8 text-sm font-black uppercase tracking-[0.28em] text-[#FF5A36]">
-              Support The Campaign
-            </p>
-
-            <h1 className="mt-4 max-w-3xl text-5xl font-black uppercase leading-[0.95] text-[#FFF3D6] md:text-6xl lg:text-7xl">
-              Donate To Help Move The Campaign Forward
-            </h1>
-
-            <div className="mt-6 h-1 w-28 bg-[#FF5A36]" />
-
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/80">
-              Your support helps power outreach, events, communications, travel,
-              media, signs, volunteer coordination, and voter engagement across
-              the Navajo Nation.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#donation-options"
-                className="rounded bg-[#FF5A36] px-7 py-4 text-center text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.32)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
-              >
-                View Donation Options
-              </a>
-
+            <Reveal>
               <Link
-                href="/get-involved"
-                className="rounded border border-[#F2E6C9]/70 bg-[#F2E6C9] px-7 py-4 text-center text-sm font-black uppercase text-[#050505] transition hover:-translate-y-1 hover:bg-white"
+                href="/"
+                className="inline-flex text-xs font-black uppercase tracking-[0.2em] text-[#F2E6C9]/60 transition hover:text-[#FF5A36]"
               >
-                Volunteer Instead
+                ← Back to Home
               </Link>
-            </div>
+            </Reveal>
+
+            <Reveal delay={0.06}>
+              <p className="mt-8 text-sm font-black uppercase tracking-[0.28em] text-[#FF5A36]">
+                Support The Campaign
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.12}>
+              <h1 className="mt-4 max-w-3xl text-5xl font-black uppercase leading-[0.95] text-[#FFF3D6] md:text-6xl lg:text-7xl">
+                Donate To Help Move The Campaign Forward
+              </h1>
+            </Reveal>
+
+            <Reveal delay={0.18}>
+              <div className="mt-6 h-1 w-28 bg-[#FF5A36]" />
+            </Reveal>
+
+            <Reveal delay={0.24}>
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/80">
+                Direct online donations are forthcoming. Until the campaign
+                activates its official donation system, supporters may contact
+                the campaign to request contribution information.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.3}>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="#donation-options"
+                  className="rounded bg-[#FF5A36] px-7 py-4 text-center text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.32)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
+                >
+                  View Donation Status
+                </a>
+
+                <Link
+                  href="/get-involved#volunteer-form"
+                  className="rounded border border-[#F2E6C9]/70 bg-[#F2E6C9] px-7 py-4 text-center text-sm font-black uppercase text-[#050505] transition hover:-translate-y-1 hover:bg-white"
+                >
+                  Contact Campaign
+                </Link>
+              </div>
+            </Reveal>
           </div>
 
-          <div className="relative mx-auto w-full max-w-xl">
+          <Reveal delay={0.16} className="relative mx-auto w-full max-w-xl">
             <div className="absolute -bottom-8 left-8 right-8 h-28 rounded-full bg-[#FF5A36]/20 blur-3xl" />
             <div className="absolute -top-8 right-10 h-40 w-40 rounded-full bg-[#F2E6C9]/10 blur-3xl" />
 
@@ -122,7 +143,7 @@ export default function DonatePage() {
               loading="eager"
               className="relative h-[380px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_42%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] lg:h-[520px]"
             />
-          </div>
+          </Reveal>
         </div>
 
         <CampaignDivider />
@@ -134,105 +155,147 @@ export default function DonatePage() {
       >
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-              Donation Options
-            </p>
+            <Reveal>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+                Donation Status
+              </p>
+            </Reveal>
 
-            <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
-              Choose A Contribution Amount
-            </h2>
+            <Reveal delay={0.08}>
+              <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
+                Direct Online Donations Are Forthcoming
+              </h2>
+            </Reveal>
 
-            <p className="mt-6 max-w-xl text-base leading-8 text-black/70">
-              These donation buttons are ready for the campaign’s approved
-              donation/payment link. Once the campaign provides the final
-              donation platform, each amount can route directly to the correct
-              contribution page.
-            </p>
+            <Reveal delay={0.14}>
+              <p className="mt-6 max-w-xl text-base leading-8 text-black/70">
+                The campaign is preparing its official donation process. Once
+                approved, this page will be updated with the official donation
+                platform, contribution instructions, and any required campaign
+                finance language.
+              </p>
+            </Reveal>
 
-            <div className="mt-8 rounded-2xl border border-[#5A1E17]/20 bg-[#FFF3D6] p-5">
-              <div className="flex gap-4">
-                <ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-[#FF5A36]" />
-                <p className="text-sm leading-7 text-black/70">
-                  Donation limits, eligibility language, reporting language, and
-                  disclaimers should be reviewed and approved by the campaign
-                  before launch.
-                </p>
+            <Reveal delay={0.2}>
+              <div className="mt-8 rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-6 shadow-[0_18px_45px_rgba(5,5,5,0.08)]">
+                <div className="flex gap-4">
+                  <ShieldCheck className="mt-1 h-7 w-7 shrink-0 text-[#FF5A36]" />
+                  <p className="text-sm leading-7 text-black/70">
+                    Until direct online donations are active, supporters who
+                    want to contribute should submit their contact information
+                    through the campaign form so the campaign team can provide
+                    approved donation instructions.
+                  </p>
+                </div>
               </div>
-            </div>
+            </Reveal>
           </div>
 
-          <div className="rounded-3xl border border-[#5A1E17]/20 bg-[#FFF3D6] p-6 shadow-[0_25px_70px_rgba(0,0,0,0.18)] md:p-8">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {donationAmounts.map((amount) => (
-                <a
-                  key={amount}
-                  href="#approved-donation-link-needed"
-                  className="group rounded-2xl border border-[#5A1E17]/20 bg-white/60 p-6 text-center transition hover:-translate-y-1 hover:border-[#FF5A36] hover:bg-white hover:shadow-xl"
-                >
-                  <p className="text-3xl font-black text-[#050505]">
-                    ${amount}
-                  </p>
-                  <p className="mt-2 text-xs font-black uppercase tracking-[0.15em] text-[#FF5A36]">
-                    Donate
-                  </p>
-                </a>
-              ))}
+          <Reveal delay={0.16}>
+            <div className="relative overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-6 shadow-[0_25px_70px_rgba(0,0,0,0.18)] md:p-8">
+              <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-[#FF5A36]/10 blur-2xl" />
+
+              <div className="relative grid h-16 w-16 place-items-center rounded-2xl bg-[#5A1E17] text-[#FF5A36] shadow-[0_14px_30px_rgba(90,30,23,0.24)]">
+                <CreditCard size={30} />
+              </div>
+
+              <p className="relative mt-6 text-xs font-black uppercase tracking-[0.22em] text-[#FF5A36]">
+                Payment Card Placeholder
+              </p>
+
+              <h3 className="relative mt-3 text-3xl font-black uppercase leading-tight text-[#050505]">
+                Online Giving Will Be Added Soon
+              </h3>
+
+              <p className="relative mt-5 text-sm leading-7 text-black/68">
+                Direct donations through this website are not active yet. The
+                campaign is finalizing the approved process for accepting
+                contributions. For now, please use the campaign form to submit
+                your contact information and request donation details.
+              </p>
+
+              <div className="relative mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {donationAmounts.map((amount) => (
+                  <div
+                    key={amount}
+                    className="rounded-2xl border border-[#5A1E17]/15 bg-white/55 p-6 text-center"
+                  >
+                    <p className="text-3xl font-black text-[#050505]">
+                      ${amount}
+                    </p>
+                    <p className="mt-2 text-xs font-black uppercase tracking-[0.15em] text-[#FF5A36]">
+                      Coming Soon
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href="/get-involved#volunteer-form"
+                className="relative mt-6 flex w-full items-center justify-center gap-2 rounded bg-[#FF5A36] px-7 py-4 text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.25)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
+              >
+                Request Donation Information
+                <ArrowRight size={17} />
+              </Link>
+
+              <p className="relative mt-5 text-xs leading-6 text-black/55">
+                This section is a placeholder only. Donation links, contribution
+                limits, eligibility language, reporting language, and
+                disclaimers should be reviewed and approved by the campaign
+                before direct donations are accepted online.
+              </p>
             </div>
-
-            <a
-              href="#approved-donation-link-needed"
-              className="mt-5 flex w-full items-center justify-center gap-2 rounded bg-[#FF5A36] px-7 py-4 text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.25)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
-            >
-              Custom Amount <ArrowUpRight size={17} />
-            </a>
-
-            <p className="mt-5 text-xs leading-6 text-black/55">
-              Placeholder only: replace these links with the campaign’s
-              approved donation platform before accepting contributions.
-            </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="bg-[#050505] px-5 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-              Why Support
-            </p>
+            <Reveal>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+                Why Support
+              </p>
+            </Reveal>
 
-            <h2 className="mt-2 text-3xl font-black uppercase text-[#FFF3D6] md:text-4xl">
-              Help Build Campaign Momentum
-            </h2>
+            <Reveal delay={0.08}>
+              <h2 className="mt-2 text-3xl font-black uppercase text-[#FFF3D6] md:text-4xl">
+                Help Build Campaign Momentum
+              </h2>
+            </Reveal>
 
-            <p className="mt-4 text-base leading-7 text-[#F2E6C9]/70">
-              Contributions help the campaign communicate its message of
-              leadership, opportunity, growth, economic sovereignty,
-              accountability, and long-term prosperity.
-            </p>
+            <Reveal delay={0.14}>
+              <p className="mt-4 text-base leading-7 text-[#F2E6C9]/70">
+                Support helps the campaign communicate its message of economic
+                sovereignty, opportunity, accountability, long-term prosperity,
+                and leadership with integrity.
+              </p>
+            </Reveal>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {supportAreas.map((item) => {
+            {supportAreas.map((item, index) => {
               const Icon = item.icon;
 
               return (
-                <article
-                  key={item.title}
-                  className="group flex h-full flex-col rounded-2xl border border-[#F2E6C9]/15 bg-white/5 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/60 hover:bg-white/[0.07]"
-                >
-                  <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[#FF5A36] text-white shadow-[0_12px_35px_rgba(255,90,54,0.25)]">
-                    <Icon size={26} />
-                  </div>
+                <Reveal key={item.title} delay={index * 0.06}>
+                  <article className="group relative h-full overflow-hidden rounded-3xl border border-[#F2E6C9]/15 bg-white/5 p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/60 hover:bg-white/10 hover:shadow-2xl">
+                    <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
 
-                  <h3 className="text-xl font-black uppercase text-[#FFF3D6]">
-                    {item.title}
-                  </h3>
+                    <div className="relative grid h-16 w-16 place-items-center rounded-2xl bg-[#5A1E17] shadow-[0_14px_30px_rgba(90,30,23,0.24)]">
+                      <div className="absolute inset-1 rounded-xl border border-[#F2E6C9]/15" />
+                      <Icon className="relative h-8 w-8 text-[#FF5A36]" />
+                    </div>
 
-                  <p className="mt-4 flex-1 text-sm leading-7 text-[#F2E6C9]/70">
-                    {item.text}
-                  </p>
-                </article>
+                    <h3 className="relative mt-6 text-lg font-black uppercase leading-tight text-[#FFF3D6]">
+                      {item.title}
+                    </h3>
+
+                    <p className="relative mt-3 text-sm leading-7 text-[#F2E6C9]/70">
+                      {item.text}
+                    </p>
+                  </article>
+                </Reveal>
               );
             })}
           </div>
@@ -253,39 +316,39 @@ export default function DonatePage() {
 
         <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-              Campaign Support
-            </p>
+            <Reveal>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+                Campaign Support
+              </p>
+            </Reveal>
 
-            <h2 className="mt-5 text-4xl font-black uppercase leading-tight md:text-5xl">
-              Every Contribution Helps Reach More Voters
-            </h2>
+            <Reveal delay={0.08}>
+              <h2 className="mt-5 text-4xl font-black uppercase leading-tight md:text-5xl">
+                Every Contribution Helps Reach More Voters
+              </h2>
+            </Reveal>
 
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-[#F2E6C9]/80">
-              Whether through donations, volunteering, sharing campaign updates,
-              or attending events, every action helps carry the campaign message
-              forward.
-            </p>
+            <Reveal delay={0.14}>
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-[#F2E6C9]/80">
+                Whether through donations, volunteering, sharing campaign
+                updates, or attending events, every action helps carry the
+                campaign message forward.
+              </p>
+            </Reveal>
           </div>
 
           <div className="grid gap-5">
-            {[
-              "Support campaign travel and community outreach",
-              "Help print signs, flyers, materials, and visibility items",
-              "Strengthen event coordination and voter engagement",
-              "Expand digital communications and campaign updates",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl border border-[#F2E6C9]/15 bg-black/25 p-5 transition hover:border-[#FF5A36]/60 hover:bg-black/40"
-              >
-                <div className="flex gap-4">
-                  <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#FF5A36]" />
-                  <p className="text-sm font-bold leading-7 text-[#F2E6C9]/75">
-                    {item}
-                  </p>
+            {campaignSupportItems.map((item, index) => (
+              <Reveal key={item} delay={index * 0.06}>
+                <div className="rounded-2xl border border-[#F2E6C9]/15 bg-black/25 p-5 transition hover:border-[#FF5A36]/60 hover:bg-black/40">
+                  <div className="flex gap-4">
+                    <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#FF5A36]" />
+                    <p className="text-sm font-bold leading-7 text-[#F2E6C9]/75">
+                      {item}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -303,7 +366,7 @@ export default function DonatePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,90,54,0.18),transparent_32%)]" />
         </div>
 
-        <div className="relative mx-auto grid max-w-7xl gap-8 rounded-3xl border border-[#F2E6C9]/15 bg-black/35 p-8 md:grid-cols-[1fr_auto] md:items-center lg:p-10">
+        <Reveal className="relative mx-auto grid max-w-7xl gap-8 rounded-3xl border border-[#F2E6C9]/15 bg-black/35 p-8 md:grid-cols-[1fr_auto] md:items-center lg:p-10">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
               More Ways To Help
@@ -321,7 +384,7 @@ export default function DonatePage() {
 
           <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
             <Link
-              href="/get-involved"
+              href="/get-involved#volunteer-form"
               className="inline-flex items-center justify-center rounded-full bg-[#FF5A36] px-6 py-3 text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.25)] transition hover:bg-[#e94b2c]"
             >
               Get Involved
@@ -334,7 +397,7 @@ export default function DonatePage() {
               View Events
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

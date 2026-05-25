@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
+  ArrowRight,
   CalendarDays,
   CheckCircle,
   Heart,
@@ -10,6 +11,7 @@ import {
   Users,
 } from "lucide-react";
 import CampaignDivider from "../components/CampaignDivider";
+import Reveal from "../components/Reveal";
 
 export const metadata: Metadata = {
   title: "Thank You | Myron Lizer for Navajo Nation President",
@@ -27,21 +29,21 @@ const nextSteps = [
   {
     icon: Users,
     title: "Stay Involved",
-    text: "The campaign team can follow up with volunteer, outreach, or event opportunities.",
+    text: "The campaign team can follow up with volunteer, donation, outreach, or event opportunities.",
     href: "/get-involved",
     label: "Get Involved",
   },
   {
     icon: Newspaper,
     title: "Read Campaign News",
-    text: "View the latest campaign announcements, articles, and media coverage.",
+    text: "View public campaign coverage, announcements, articles, and media references.",
     href: "/news",
     label: "Latest News",
   },
   {
     icon: CalendarDays,
     title: "Attend Events",
-    text: "Check upcoming campaign events, community visits, and outreach opportunities.",
+    text: "Check upcoming campaign events, chapter visits, and community outreach opportunities.",
     href: "/events",
     label: "View Events",
   },
@@ -67,67 +69,87 @@ export default function ThankYouPage() {
 
         <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-20">
           <div>
-            <Link
-              href="/"
-              className="inline-flex text-xs font-black uppercase tracking-[0.2em] text-[#F2E6C9]/60 transition hover:text-[#FF5A36]"
-            >
-              ← Back to Home
-            </Link>
-
-            <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-[#FF5A36]/35 bg-[#FF5A36]/10 px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#FF5A36]">
-              <CheckCircle size={19} />
-              Submission Received
-            </div>
-
-            <h1 className="mt-6 max-w-3xl text-5xl font-black uppercase leading-[0.95] text-[#FFF3D6] md:text-6xl lg:text-7xl">
-              Thank You For Getting Involved
-            </h1>
-
-            <div className="mt-6 h-1 w-28 bg-[#FF5A36]" />
-
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/80">
-              Your submission has been received. Thank you for taking the time
-              to connect with the campaign and help support the message of
-              leadership, opportunity, and growth for the Navajo Nation.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Reveal>
               <Link
-                href="/news"
-                className="rounded bg-[#FF5A36] px-7 py-4 text-center text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.32)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
+                href="/"
+                className="inline-flex text-xs font-black uppercase tracking-[0.2em] text-[#F2E6C9]/60 transition hover:text-[#FF5A36]"
               >
-                Read Campaign News
+                ← Back to Home
               </Link>
+            </Reveal>
 
-              <Link
-                href="/events"
-                className="rounded border border-[#F2E6C9]/70 bg-[#F2E6C9] px-7 py-4 text-center text-sm font-black uppercase text-[#050505] transition hover:-translate-y-1 hover:bg-white"
-              >
-                View Events
-              </Link>
-            </div>
+            <Reveal delay={0.06}>
+              <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-[#FF5A36]/35 bg-[#FF5A36]/10 px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#FF5A36]">
+                <CheckCircle size={19} />
+                Submission Received
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.12}>
+              <h1 className="mt-6 max-w-3xl text-5xl font-black uppercase leading-[0.95] text-[#FFF3D6] md:text-6xl lg:text-7xl">
+                Thank You For Getting Involved
+              </h1>
+            </Reveal>
+
+            <Reveal delay={0.18}>
+              <div className="mt-6 h-1 w-28 bg-[#FF5A36]" />
+            </Reveal>
+
+            <Reveal delay={0.24}>
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/80">
+                Your submission has been received. Thank you for taking the time
+                to connect with the campaign and help support the message of
+                economic sovereignty, opportunity, integrity, and long-term
+                prosperity for the Navajo Nation.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.3}>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/news"
+                  className="rounded bg-[#FF5A36] px-7 py-4 text-center text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.32)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
+                >
+                  Read Campaign News
+                </Link>
+
+                <Link
+                  href="/events"
+                  className="rounded border border-[#F2E6C9]/70 bg-[#F2E6C9] px-7 py-4 text-center text-sm font-black uppercase text-[#050505] transition hover:-translate-y-1 hover:bg-white"
+                >
+                  View Events
+                </Link>
+              </div>
+            </Reveal>
           </div>
 
-          <div className="relative mx-auto w-full max-w-xl">
+          <Reveal delay={0.16} className="relative mx-auto w-full max-w-xl">
             <div className="absolute -bottom-8 left-8 right-8 h-28 rounded-full bg-[#FF5A36]/20 blur-3xl" />
             <div className="absolute -top-8 right-10 h-40 w-40 rounded-full bg-[#F2E6C9]/10 blur-3xl" />
 
-            <div className="relative rounded-3xl border border-[#F2E6C9]/20 bg-black/35 p-8 shadow-[0_35px_90px_rgba(0,0,0,0.55)] backdrop-blur">
-              <div className="grid h-20 w-20 place-items-center rounded-3xl bg-[#FF5A36] text-white shadow-[0_18px_45px_rgba(255,90,54,0.28)]">
+            <div className="relative overflow-hidden rounded-3xl border border-[#F2E6C9]/20 bg-black/35 p-8 shadow-[0_35px_90px_rgba(0,0,0,0.55)] backdrop-blur">
+              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#FF5A36]/10 blur-2xl" />
+
+              <div className="relative grid h-20 w-20 place-items-center rounded-3xl bg-[#FF5A36] text-white shadow-[0_18px_45px_rgba(255,90,54,0.28)]">
                 <Mail size={38} />
               </div>
 
-              <h2 className="mt-8 text-3xl font-black uppercase leading-tight text-[#FFF3D6]">
+              <p className="relative mt-7 text-xs font-black uppercase tracking-[0.22em] text-[#FF5A36]">
+                Campaign Follow-Up
+              </p>
+
+              <h2 className="relative mt-3 text-3xl font-black uppercase leading-tight text-[#FFF3D6]">
                 The Campaign Team Will Review Your Message
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-[#F2E6C9]/75">
+              <p className="relative mt-5 text-base leading-8 text-[#F2E6C9]/75">
                 If follow-up is needed, the campaign can use the contact
                 information you submitted to connect with you about volunteer
-                opportunities, events, outreach, or other next steps.
+                opportunities, donation information, events, outreach, or other
+                next steps.
               </p>
 
-              <div className="mt-7 rounded-2xl border border-[#F2E6C9]/15 bg-white/5 p-5">
+              <div className="relative mt-7 rounded-2xl border border-[#F2E6C9]/15 bg-white/5 p-5">
                 <div className="flex gap-4">
                   <Heart className="mt-1 h-5 w-5 shrink-0 text-[#FF5A36]" />
                   <p className="text-sm font-bold leading-7 text-[#F2E6C9]/72">
@@ -137,7 +159,7 @@ export default function ThankYouPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         <CampaignDivider />
@@ -146,49 +168,58 @@ export default function ThankYouPage() {
       <section className="bg-[#F2E6C9] px-5 py-20 text-[#050505]">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-              Next Steps
-            </p>
+            <Reveal>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+                Next Steps
+              </p>
+            </Reveal>
 
-            <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
-              Keep Following The Campaign
-            </h2>
+            <Reveal delay={0.08}>
+              <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
+                Keep Following The Campaign
+              </h2>
+            </Reveal>
 
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-black/70">
-              Stay connected with upcoming announcements, events, volunteer
-              opportunities, and campaign updates as new information becomes
-              available.
-            </p>
+            <Reveal delay={0.14}>
+              <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-black/70">
+                Stay connected with upcoming announcements, events, volunteer
+                opportunities, donation updates, and campaign news as new
+                information becomes available.
+              </p>
+            </Reveal>
           </div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {nextSteps.map((item) => {
+            {nextSteps.map((item, index) => {
               const Icon = item.icon;
 
               return (
-                <article
-                  key={item.title}
-                  className="rounded-2xl border border-[#5A1E17]/20 bg-[#FFF3D6] p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[#5A1E17] text-[#FF5A36]">
-                    <Icon size={26} />
-                  </div>
+                <Reveal key={item.title} delay={index * 0.06}>
+                  <article className="group relative h-full overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-7 shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/55 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]">
+                    <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
 
-                  <h3 className="mt-6 text-xl font-black uppercase text-[#050505]">
-                    {item.title}
-                  </h3>
+                    <div className="relative grid h-16 w-16 place-items-center rounded-2xl bg-[#5A1E17] shadow-[0_14px_30px_rgba(90,30,23,0.24)]">
+                      <div className="absolute inset-1 rounded-xl border border-[#F2E6C9]/15" />
+                      <Icon className="relative h-8 w-8 text-[#FF5A36]" />
+                    </div>
 
-                  <p className="mt-3 text-sm leading-7 text-black/65">
-                    {item.text}
-                  </p>
+                    <h3 className="relative mt-6 text-xl font-black uppercase text-[#050505]">
+                      {item.title}
+                    </h3>
 
-                  <Link
-                    href={item.href}
-                    className="mt-6 inline-flex text-sm font-black uppercase text-[#FF5A36] transition hover:text-[#5A1E17]"
-                  >
-                    {item.label} →
-                  </Link>
-                </article>
+                    <p className="relative mt-3 text-sm leading-7 text-black/65">
+                      {item.text}
+                    </p>
+
+                    <Link
+                      href={item.href}
+                      className="relative mt-6 inline-flex items-center gap-2 text-sm font-black uppercase text-[#FF5A36] transition hover:gap-3 hover:text-[#5A1E17]"
+                    >
+                      {item.label}
+                      <ArrowRight size={17} />
+                    </Link>
+                  </article>
+                </Reveal>
               );
             })}
           </div>
@@ -207,7 +238,7 @@ export default function ThankYouPage() {
           />
         </div>
 
-        <div className="relative mx-auto grid max-w-7xl gap-8 rounded-3xl border border-[#F2E6C9]/15 bg-black/25 p-8 md:grid-cols-[1fr_auto] md:items-center lg:p-10">
+        <Reveal className="relative mx-auto grid max-w-7xl gap-8 rounded-3xl border border-[#F2E6C9]/15 bg-black/25 p-8 md:grid-cols-[1fr_auto] md:items-center lg:p-10">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
               Continue The Momentum
@@ -219,7 +250,8 @@ export default function ThankYouPage() {
 
             <p className="mt-4 max-w-3xl text-base leading-7 text-[#F2E6C9]/75">
               You can continue helping by sharing campaign updates, attending
-              events, volunteering, or inviting others to get involved.
+              events, volunteering, requesting donation information, or inviting
+              others to get involved.
             </p>
           </div>
 
@@ -238,7 +270,7 @@ export default function ThankYouPage() {
               Return Home
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );
