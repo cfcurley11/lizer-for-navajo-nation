@@ -6,11 +6,14 @@ import {
   Building2,
   Droplets,
   GraduationCap,
+  Handshake,
   HeartPulse,
   Home,
   Landmark,
   Lightbulb,
+  Mountain,
   Route,
+  Scale,
   ShieldCheck,
   Sprout,
   Users,
@@ -26,8 +29,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Priorities | Myron Lizer for Navajo Nation President",
     description:
-      "Leadership, opportunity, growth, economic sovereignty, infrastructure, accountability, and long-term prosperity for the Navajo Nation.",
-    images: ["/images/myron-lizer/myron-about-speaking.jpg"],
+      "Economic sovereignty, infrastructure, jobs, energy, water, integrity, and long-term prosperity for the Navajo Nation.",
+    images: ["/images/myron-lizer/myron-look.jpg"],
   },
 };
 
@@ -35,42 +38,42 @@ const priorityCards = [
   {
     icon: BriefcaseBusiness,
     title: "Economic Sovereignty",
-    text: "Build a stronger Navajo economy by supporting local enterprise, job creation, small businesses, and long-term self-reliance.",
+    text: "Strengthening the Navajo economy through business growth, local opportunity, job creation, and long-term self-reliance.",
   },
   {
     icon: Zap,
     title: "Energy & Jobs",
-    text: "Advance energy opportunities that can create jobs, strengthen local revenue, and support future economic development.",
+    text: "Advancing energy opportunities that support employment, revenue, infrastructure, and future economic development.",
   },
   {
     icon: Building2,
     title: "Infrastructure",
-    text: "Prioritize roads, utilities, broadband, facilities, and essential systems that allow communities and businesses to grow.",
+    text: "Prioritizing roads, utilities, facilities, broadband, and essential systems that help communities move forward.",
   },
   {
     icon: Droplets,
     title: "Water Access",
-    text: "Support practical solutions for water access, community needs, and infrastructure that improves everyday life.",
+    text: "Supporting practical water solutions that improve daily life for families, chapters, businesses, and future generations.",
   },
   {
     icon: Home,
-    title: "Housing & Families",
-    text: "Focus on the needs of Navajo families, including housing, utilities, community services, and safer living conditions.",
+    title: "Families & Housing",
+    text: "Focusing on the everyday needs of Navajo families, including housing, utilities, safer communities, and basic services.",
   },
   {
     icon: GraduationCap,
     title: "Youth & Education",
-    text: "Invest in students, workforce development, opportunity pathways, and future generations of Navajo leadership.",
+    text: "Creating opportunity pathways for students, young workers, entrepreneurs, and the next generation of Navajo leadership.",
   },
   {
-    icon: Landmark,
-    title: "Integrity In Government",
-    text: "Restore trust through accountability, transparency, responsible leadership, and service-centered decision making.",
+    icon: Scale,
+    title: "Integrity In Leadership",
+    text: "Restoring trust through accountability, transparency, responsible decision-making, and service-centered leadership.",
   },
   {
     icon: Sprout,
     title: "Land & Resources",
-    text: "Protect land, water, natural resources, and traditional values while planning responsibly for future generations.",
+    text: "Protecting land, water, natural resources, and traditional values while planning responsibly for the future.",
   },
 ];
 
@@ -78,58 +81,84 @@ const actionPriorities = [
   {
     icon: Route,
     title: "Move Projects Forward",
-    text: "Focus on practical execution, partnership building, and turning major needs into real progress for communities.",
+    text: "Focus on execution, partnerships, planning, and the follow-through needed to turn priorities into visible progress.",
   },
   {
     icon: Users,
     title: "Listen To Communities",
-    text: "Keep families, chapters, business owners, veterans, elders, and young people connected to the campaign conversation.",
+    text: "Keep families, chapters, elders, veterans, business owners, and young people connected to the campaign conversation.",
   },
   {
     icon: Lightbulb,
     title: "Build New Opportunity",
-    text: "Support ideas that reduce dependence, create revenue, strengthen business growth, and expand local opportunity.",
+    text: "Support ideas that reduce dependence, grow revenue, strengthen business, and expand local opportunity.",
   },
   {
     icon: ShieldCheck,
     title: "Lead With Accountability",
-    text: "Promote leadership that is transparent, responsible, responsive, and focused on long-term public trust.",
+    text: "Promote leadership that is transparent, responsible, responsive, and focused on rebuilding public trust.",
   },
 ];
 
 const platformSections = [
   {
     eyebrow: "Economy",
+    icon: BriefcaseBusiness,
     title: "Jobs, Business & Economic Sovereignty",
-    text: "Myron Lizer’s campaign message emphasizes economic sovereignty and the need to create jobs, strengthen infrastructure, and prepare the Navajo Nation for a future with less dependence on declining outside support.",
+    text: "Economic sovereignty means building a Navajo economy that works for Navajo families. It starts with local opportunity, stronger business conditions, job creation, and long-term planning.",
     bullets: [
       "Support Navajo-owned businesses and local entrepreneurs",
-      "Create conditions for job growth across communities",
-      "Strengthen revenue opportunities and long-term self-reliance",
+      "Create stronger conditions for job growth",
       "Connect economic development to infrastructure and energy planning",
+      "Build long-term self-reliance and local revenue opportunities",
     ],
   },
   {
     eyebrow: "Infrastructure",
+    icon: Building2,
     title: "Water, Roads, Broadband & Essential Services",
-    text: "A stronger economy depends on the basics: water, roads, reliable utilities, broadband, and the infrastructure needed to support families, businesses, schools, and public services.",
+    text: "A stronger future depends on the basics. Families, schools, businesses, chapters, and public services need reliable infrastructure to grow and function.",
     bullets: [
       "Improve access to water and essential utilities",
-      "Support roads, community facilities, and public infrastructure",
-      "Expand broadband and connectivity across rural areas",
-      "Prioritize practical projects that improve daily life",
+      "Support roads, facilities, and community infrastructure",
+      "Expand broadband and rural connectivity",
+      "Prioritize projects that improve everyday life",
     ],
   },
   {
     eyebrow: "Government",
+    icon: Landmark,
     title: "Integrity, Accountability & Public Trust",
-    text: "The campaign announcement has emphasized restoring integrity to the Office of the President and building leadership rooted in accountability, responsible decision making, and public service.",
+    text: "Leadership must be rooted in responsibility, communication, and respect for the people. Restoring trust requires transparency, follow-through, and accountable service.",
     bullets: [
-      "Promote transparency and responsible leadership",
+      "Promote transparent and responsible leadership",
       "Improve communication with chapters and communities",
-      "Build trust through consistent action and follow-through",
-      "Focus on results that people can see and measure",
+      "Build trust through consistent action",
+      "Focus on results people can see and measure",
     ],
+  },
+];
+
+const leadershipFocus = [
+  {
+    icon: BriefcaseBusiness,
+    title: "Create Opportunity",
+    text: "Support business growth, job creation, and practical pathways to local prosperity.",
+  },
+  {
+    icon: Wifi,
+    title: "Connect Communities",
+    text: "Improve broadband, roads, utilities, and systems that support rural life.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Support Families",
+    text: "Advance priorities tied to housing, healthcare, safety, education, and stability.",
+  },
+  {
+    icon: Handshake,
+    title: "Rebuild Trust",
+    text: "Lead with integrity, accountability, transparency, and responsible public service.",
   },
 ];
 
@@ -165,15 +194,15 @@ export default function PrioritiesPage() {
             </p>
 
             <h1 className="mt-4 max-w-3xl text-5xl font-black uppercase leading-[0.95] text-[#FFF3D6] md:text-6xl lg:text-7xl">
-              Leadership. Opportunity. Growth.
+              Economic Sovereignty. Real Opportunity.
             </h1>
 
             <div className="mt-6 h-1 w-28 bg-[#FF5A36]" />
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/80">
-              Myron Lizer’s campaign is focused on economic sovereignty, jobs,
-              energy, infrastructure, water, integrity, and long-term
-              prosperity for the Navajo people.
+              Myron Lizer’s campaign is focused on practical priorities that
+              matter to Navajo families: jobs, infrastructure, water, energy,
+              integrity, and long-term prosperity.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -198,7 +227,7 @@ export default function PrioritiesPage() {
             <div className="absolute -top-8 right-10 h-40 w-40 rounded-full bg-[#F2E6C9]/10 blur-3xl" />
 
             <Image
-              src="/images/myron-lizer/myron-about-speaking.jpg"
+              src="/images/myron-lizer/myron-look.jpg"
               alt="Myron Lizer speaking about campaign priorities"
               width={900}
               height={700}
@@ -220,40 +249,46 @@ export default function PrioritiesPage() {
             </p>
 
             <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
-              Practical Priorities For A Stronger Navajo Nation
+              Priorities Built Around Everyday Needs
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-black/75">
-              These priorities connect campaign messaging to the everyday needs
+              These priorities connect campaign messaging to the daily realities
               of Navajo families, chapters, businesses, students, elders, and
               future generations.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {priorityCards.map((item) => {
-              const Icon = item.icon;
+ <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+  {priorityCards.map((item) => {
+    const Icon = item.icon;
 
-              return (
-                <article
-                  key={item.title}
-                  className="rounded-2xl border border-[#5A1E17]/20 bg-[#FFF3D6] p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div className="grid h-13 w-13 place-items-center rounded-2xl bg-[#5A1E17] p-3 text-[#FF5A36]">
-                    <Icon className="h-8 w-8" />
-                  </div>
+    return (
+      <article
+        key={item.title}
+        className="group relative overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-7 shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/55 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]"
+      >
+        <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
 
-                  <h3 className="mt-6 text-lg font-black uppercase text-[#050505]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-7 text-black/65">
-                    {item.text}
-                  </p>
-                </article>
-              );
-            })}
+        <div className="relative flex items-center">
+          <div className="relative grid h-16 w-16 place-items-center rounded-2xl bg-[#5A1E17] shadow-[0_14px_30px_rgba(90,30,23,0.24)]">
+            <div className="absolute inset-1 rounded-xl border border-[#F2E6C9]/15" />
+            <Icon className="relative h-8 w-8 text-[#FF5A36]" />
           </div>
+        </div>
+
+        <h3 className="relative mt-6 text-lg font-black uppercase leading-tight text-[#050505]">
+          {item.title}
+        </h3>
+
+        <p className="relative mt-3 text-sm leading-7 text-black/65">
+          {item.text}
+        </p>
+      </article>
+    );
+  })}
+</div>
+
         </div>
       </section>
 
@@ -263,7 +298,7 @@ export default function PrioritiesPage() {
             <div className="absolute -bottom-6 left-8 h-32 w-32 rounded-full bg-[#FF5A36]/25 blur-3xl" />
 
             <Image
-              src="/images/myron-lizer/myron-community-veterans.jpg"
+              src="/images/myron-lizer/myron-look.jpg"
               alt="Myron Lizer with community members and veterans"
               width={900}
               height={700}
@@ -281,10 +316,9 @@ export default function PrioritiesPage() {
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-[#F2E6C9]/80">
-              The campaign’s priorities should be easy for voters to understand:
-              stronger local opportunity, reliable infrastructure, responsible
-              leadership, and a future where Navajo communities can grow with
-              confidence.
+              The campaign’s priorities are designed to be clear and practical:
+              strengthen opportunity, improve essential infrastructure, support
+              families, and restore trust in leadership.
             </p>
 
             <div className="mt-8 grid gap-4">
@@ -294,11 +328,11 @@ export default function PrioritiesPage() {
                 return (
                   <div
                     key={item.title}
-                    className="rounded-xl border border-[#F2E6C9]/15 bg-white/5 p-5 transition hover:border-[#FF5A36]/50 hover:bg-white/10"
+                    className="group rounded-2xl border border-[#F2E6C9]/15 bg-white/5 p-5 transition hover:-translate-y-1 hover:border-[#FF5A36]/50 hover:bg-white/10"
                   >
                     <div className="flex gap-4">
-                      <div className="mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#FF5A36] text-white">
-                        <Icon size={20} />
+                      <div className="mt-1 grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[#FF5A36] text-white shadow-[0_10px_25px_rgba(255,90,54,0.22)]">
+                        <Icon size={22} />
                       </div>
 
                       <div>
@@ -338,44 +372,56 @@ export default function PrioritiesPage() {
             </h2>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-black/70">
-              As the campaign team finalizes its strategy package, this page can
-              be refined with approved policy language, specific commitments,
-              and direct quotes from Myron Lizer.
+              As the campaign team finalizes official platform language, this
+              page can be refined with approved policy details, direct quotes,
+              and community-specific priorities.
             </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
-            {platformSections.map((section) => (
-              <article
-                key={section.title}
-                className="rounded-3xl border border-[#5A1E17]/20 bg-[#FFF3D6] p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#FF5A36]">
-                  {section.eyebrow}
-                </p>
+            {platformSections.map((section) => {
+              const Icon = section.icon;
 
-                <h3 className="mt-4 text-2xl font-black uppercase leading-tight text-[#050505]">
-                  {section.title}
-                </h3>
+              return (
+                <article
+                  key={section.title}
+                  className="group relative overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-7 shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/50 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]"
+                >
+                  <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
 
-                <p className="mt-5 text-sm leading-7 text-black/68">
-                  {section.text}
-                </p>
-
-                <div className="mt-6 grid gap-3">
-                  {section.bullets.map((bullet) => (
-                    <div
-                      key={bullet}
-                      className="rounded-xl border border-[#5A1E17]/15 bg-white/45 p-4"
-                    >
-                      <p className="text-sm font-bold leading-6 text-black/70">
-                        {bullet}
-                      </p>
+                  <div className="relative mb-6 flex items-center justify-between">
+                    <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[#5A1E17] text-[#FF5A36] shadow-[0_14px_30px_rgba(90,30,23,0.22)]">
+                      <Icon size={28} />
                     </div>
-                  ))}
-                </div>
-              </article>
-            ))}
+
+                    <p className="text-xs font-black uppercase tracking-[0.18em] text-[#FF5A36]">
+                      {section.eyebrow}
+                    </p>
+                  </div>
+
+                  <h3 className="relative text-2xl font-black uppercase leading-tight text-[#050505]">
+                    {section.title}
+                  </h3>
+
+                  <p className="relative mt-5 text-sm leading-7 text-black/68">
+                    {section.text}
+                  </p>
+
+                  <div className="relative mt-6 grid gap-3">
+                    {section.bullets.map((bullet) => (
+                      <div
+                        key={bullet}
+                        className="rounded-2xl border border-[#5A1E17]/12 bg-white/45 p-4 transition group-hover:border-[#5A1E17]/20"
+                      >
+                        <p className="text-sm font-bold leading-6 text-black/70">
+                          {bullet}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -411,37 +457,16 @@ export default function PrioritiesPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
-            {[
-              {
-                icon: BriefcaseBusiness,
-                title: "Create Opportunity",
-                text: "Support business growth, job creation, and practical pathways to local prosperity.",
-              },
-              {
-                icon: Wifi,
-                title: "Connect Communities",
-                text: "Improve infrastructure, broadband, roads, and systems that support rural life.",
-              },
-              {
-                icon: HeartPulse,
-                title: "Support Families",
-                text: "Advance priorities connected to housing, healthcare, safety, education, and family stability.",
-              },
-              {
-                icon: ShieldCheck,
-                title: "Restore Trust",
-                text: "Lead with integrity, accountability, transparency, and responsible public service.",
-              },
-            ].map((item) => {
+            {leadershipFocus.map((item) => {
               const Icon = item.icon;
 
               return (
                 <article
                   key={item.title}
-                  className="rounded-2xl border border-[#F2E6C9]/15 bg-black/25 p-6 transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/60 hover:bg-black/40"
+                  className="group rounded-3xl border border-[#F2E6C9]/15 bg-black/25 p-6 transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/60 hover:bg-black/40"
                 >
-                  <div className="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-[#FF5A36] text-white">
-                    <Icon size={24} />
+                  <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[#FF5A36] text-white shadow-[0_12px_30px_rgba(255,90,54,0.28)]">
+                    <Icon size={26} />
                   </div>
 
                   <h3 className="text-lg font-black uppercase text-[#FFF3D6]">

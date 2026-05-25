@@ -1,73 +1,79 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  CalendarDays,
-  Heart,
-  Mail,
-  ShieldCheck,
-  TrendingUp,
-  Users,
-  Handshake,
-  Landmark,
-} from "lucide-react";
 import type { Metadata } from "next";
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  Building2,
+  CalendarDays,
+  Droplets,
+  Handshake,
+  HeartHandshake,
+  Landmark,
+  Mail,
+  Newspaper,
+  ShieldCheck,
+  Users,
+  Zap,
+} from "lucide-react";
 import CampaignDivider from "./components/CampaignDivider";
+import Reveal from "./components/Reveal";
 
 export const metadata: Metadata = {
   title: "Myron Lizer for Navajo Nation President",
   description:
-    "Official campaign website for Myron Lizer, 2026 Navajo Nation President candidate, focused on leadership, opportunity, growth, integrity, and prosperity for the Navajo people.",
+    "Official campaign website for Myron Lizer, 2026 Navajo Nation President candidate, focused on economic sovereignty, jobs, infrastructure, water, energy, integrity, and long-term prosperity for the Navajo people.",
   openGraph: {
     title: "Myron Lizer for Navajo Nation President",
     description:
-      "Leadership, opportunity, growth, and long-term prosperity for the Navajo Nation.",
+      "Economic sovereignty, stronger infrastructure, jobs for our people, and leadership with integrity.",
     images: ["/images/myron-lizer/myron-hero-orange.jpg"],
   },
 };
 
-const values = [
+const priorities = [
   {
-    icon: Users,
-    title: "Our People",
-    text: "Empowering families and strengthening communities.",
+    icon: BriefcaseBusiness,
+    title: "Economic Sovereignty",
+    text: "Building a stronger Navajo economy through local opportunity, business growth, jobs, and long-term self-reliance.",
   },
   {
-    icon: Handshake,
-    title: "Our Economy",
-    text: "Supporting opportunity, jobs, and Navajo-owned businesses.",
+    icon: Zap,
+    title: "Energy & Jobs",
+    text: "Advancing energy and development opportunities that support employment, revenue, and community infrastructure.",
+  },
+  {
+    icon: Building2,
+    title: "Infrastructure",
+    text: "Focusing on roads, utilities, broadband, facilities, and essential systems that help communities move forward.",
   },
   {
     icon: ShieldCheck,
-    title: "Our Future",
-    text: "Investing in youth, education, and infrastructure.",
-  },
-  {
-    icon: Heart,
-    title: "Our Values",
-    text: "Leading with faith, unity, respect, and accountability.",
+    title: "Integrity In Leadership",
+    text: "Restoring trust through accountability, responsible decision-making, transparency, and service-centered leadership.",
   },
 ];
 
-const priorities = [
+const messagePoints = [
   {
-    icon: TrendingUp,
-    title: "Strong Economy",
-    text: "Create jobs, support Navajo businesses, and build self-reliance.",
+    icon: Droplets,
+    title: "Water",
+    text: "Supporting practical solutions for families, chapters, and future generations.",
   },
   {
-    icon: Users,
-    title: "Strong Families",
-    text: "Invest in education, healthcare, housing, and youth.",
+    icon: Building2,
+    title: "Infrastructure",
+    text: "Strengthening the systems that support daily life, business, and community services.",
+  },
+  {
+    icon: BriefcaseBusiness,
+    title: "Jobs",
+    text: "Creating conditions for work, opportunity, entrepreneurship, and local prosperity.",
   },
   {
     icon: Landmark,
-    title: "Better Infrastructure",
-    text: "Improve roads, utilities, broadband, and essential services.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Protect Our Land",
-    text: "Preserve land, water, and natural resources.",
+    title: "Trust",
+    text: "Leading with integrity, accountability, and respect for the Navajo people.",
   },
 ];
 
@@ -75,8 +81,8 @@ const newsArticles = [
   {
     source: "Navajo Times",
     date: "May 2026",
-    title: "Lizer Launches Presidential Bid Focused on Jobs & Energy",
-    text: "Coverage of Myron Lizer’s campaign launch and his focus on economic sovereignty, jobs, infrastructure, and long-term prosperity.",
+    title: "Lizer launches bid focused on jobs and energy",
+    text: "Recent coverage highlighted Myron Lizer’s campaign launch and his message around economic sovereignty, jobs, infrastructure, energy, and long-term prosperity.",
     image: "/images/myron-lizer/myron-about-leadership.jpg",
     imagePosition: "object-[center_42%]",
     alt: "Myron Lizer campaign leadership portrait",
@@ -85,460 +91,471 @@ const newsArticles = [
   {
     source: "Gallup Sun",
     date: "May 2026",
-    title: "Former VP Myron Lizer Announces Candidacy",
-    text: "Announcement coverage highlighting Lizer’s campaign for President of the Navajo Nation and his message of leadership, opportunity, and growth.",
+    title: "Former Vice President announces candidacy",
+    text: "Public announcement coverage emphasized visionary leadership, economic sovereignty, restoring integrity, and building a stronger future for the Navajo Nation.",
     image: "/images/myron-lizer/myron-community-veterans.jpg",
     imagePosition: "object-[center_30%]",
-    alt: "Myron Lizer with community and veterans",
+    alt: "Myron Lizer with community members and veterans",
     href: "https://gallupsunweekly.com/2026/05/13/former-vp-myron-lizer-announces-candidacy-for-navajo-nation-president/",
   },
   {
     source: "ICT",
     date: "May 2026",
-    title: "The Navajo Nation 2026 Presidential Election",
-    text: "Election coverage outlining the 2026 Navajo Nation presidential field, including former Vice President Myron Lizer.",
-    image: "/images/myron-lizer/myron-about-speaking.jpg",
+    title: "2026 Navajo Nation presidential field",
+    text: "Election coverage listed Myron Lizer among the 2026 Navajo Nation presidential candidates and referenced his background in leadership and business.",
+    image: "/images/myron-lizer/myron-look.jpg",
     imagePosition: "object-[center_28%]",
-    alt: "Myron Lizer speaking at campaign event",
+    alt: "Myron Lizer",
     href: "https://ictnews.org/news/the-navajo-nation-2026-presidential-election/",
   },
 ];
 
-const events = [
+const getInvolved = [
   {
-    date: "May 24",
-    title: "Window Rock Community Meet & Greet",
-    location: "Window Rock, AZ",
+    icon: Users,
+    title: "Volunteer",
+    text: "Help with outreach, events, calls, community contact, and campaign support.",
+    href: "/get-involved",
   },
   {
-    date: "May 31",
-    title: "Shiprock Chapter Visit",
-    location: "Shiprock, NM",
+    icon: CalendarDays,
+    title: "Attend Events",
+    text: "Follow upcoming appearances, community gatherings, and campaign events as they are announced.",
+    href: "/events",
   },
   {
-    date: "Jun 07",
-    title: "Gallup Campaign Rally",
-    location: "Gallup, NM",
+    icon: Mail,
+    title: "Stay Connected",
+    text: "Join the campaign contact list for updates, volunteer opportunities, and future announcements.",
+    href: "/contact",
   },
 ];
 
 export default function MyronLizerCampaignPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-[#FFF3D6]">
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-            @keyframes campaignReveal {
-              from {
-                opacity: 0;
-                transform: translateY(26px);
-                filter: blur(6px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-                filter: blur(0);
-              }
-            }
-
-            @keyframes campaignImageReveal {
-              from {
-                opacity: 0;
-                transform: translateY(30px) scale(0.98);
-                filter: blur(8px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-                filter: blur(0);
-              }
-            }
-
-            .campaign-reveal {
-              animation: campaignReveal 0.85s ease-out both;
-            }
-
-            .campaign-image-reveal {
-              animation: campaignImageReveal 1s ease-out both;
-            }
-
-            .delay-100 { animation-delay: 0.1s; }
-            .delay-200 { animation-delay: 0.2s; }
-            .delay-300 { animation-delay: 0.3s; }
-            .delay-400 { animation-delay: 0.4s; }
-          `,
-        }}
-      />
-
-      <section className="relative overflow-hidden bg-[#050505] pt-20 lg:pt-24">
+      <section className="relative overflow-hidden bg-[#050505] pt-20 text-[#FFF3D6] lg:pt-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/myron-lizer/hero-dark-texture.png"
-            alt=""
+            src="/images/myron-lizer/myron-hero-orange.jpg"
+            alt="Myron Lizer"
             fill
             priority
             loading="eager"
             sizes="100vw"
-            className="object-cover opacity-70"
+            className="object-cover object-[center_28%] opacity-55"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/92 to-[#050505]/35" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,90,54,0.22),transparent_35%)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-[#5A1E17]/45" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_28%,rgba(255,90,54,0.24),transparent_34%)]" />
         </div>
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 lg:grid-cols-[0.95fr_1.05fr] lg:py-16">
-          <div className="campaign-reveal">
-            <p className="text-sm font-black uppercase tracking-[0.28em] text-[#FFF3D6]">
-              Myron
-            </p>
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:py-16">
+          <div>
+            <Reveal>
+              <p className="text-sm font-black uppercase tracking-[0.28em] text-[#FF5A36]">
+                Myron Lizer For Navajo Nation President
+              </p>
+            </Reveal>
 
-            <h1 className="mt-3 max-w-2xl text-7xl font-black uppercase leading-[0.82] tracking-tight text-[#FF5A36] md:text-8xl lg:text-9xl">
-              Lizer
-            </h1>
+            <Reveal delay={0.08}>
+              <h1 className="mt-5 max-w-4xl text-5xl font-black uppercase leading-[0.92] text-[#FFF3D6] md:text-6xl lg:text-7xl">
+                Economic Sovereignty. Stronger Communities.
+              </h1>
+            </Reveal>
 
-            <p className="mt-4 text-xl font-black uppercase tracking-[0.08em] text-[#FFF3D6] md:text-2xl">
-              2026 Navajo Nation President
-            </p>
+            <Reveal delay={0.14}>
+              <div className="mt-6 h-1 w-28 bg-[#FF5A36]" />
+            </Reveal>
 
-            <div className="mt-5 h-1 w-32 bg-[#FF5A36]" />
+            <Reveal delay={0.2}>
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/82">
+                Myron Lizer’s campaign is focused on jobs, infrastructure,
+                water, energy, long-term prosperity, and leadership with
+                integrity for the Navajo people.
+              </p>
+            </Reveal>
 
-            <p className="mt-6 text-2xl font-black text-[#F2E6C9]">
-              Leadership • Opportunity • Growth
-            </p>
+            <Reveal delay={0.28}>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/get-involved"
+                  className="rounded bg-[#FF5A36] px-7 py-4 text-center text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.34)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
+                >
+                  Join The Campaign
+                </Link>
 
-            <p className="mt-5 max-w-xl text-lg leading-8 text-[#F2E6C9]/85">
-              A Navajo leader with a clear vision for a stronger, more
-              prosperous Navajo Nation. Together, we can build a future of
-              opportunity, unity, and lasting growth for our people.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/get-involved"
-                className="rounded bg-[#FF5A36] px-7 py-4 text-center text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.32)] transition hover:-translate-y-1 hover:bg-[#e94b2c] hover:shadow-[0_18px_45px_rgba(255,90,54,0.42)]"
-              >
-                Join the Campaign
-              </Link>
-
-              <Link
-                href="/priorities"
-                className="rounded border border-[#F2E6C9]/70 bg-[#F2E6C9] px-7 py-4 text-center text-sm font-black uppercase text-[#050505] transition hover:-translate-y-1 hover:bg-white hover:shadow-lg"
-              >
-                View Priorities
-              </Link>
-            </div>
+                <Link
+                  href="/priorities"
+                  className="rounded border border-[#F2E6C9]/70 bg-[#F2E6C9] px-7 py-4 text-center text-sm font-black uppercase text-[#050505] transition hover:-translate-y-1 hover:bg-white"
+                >
+                  View Priorities
+                </Link>
+              </div>
+            </Reveal>
           </div>
 
-          <div className="campaign-image-reveal delay-200 relative mx-auto w-full max-w-xl">
-            <div className="absolute -bottom-8 left-8 right-8 h-28 rounded-full bg-[#FF5A36]/25 blur-3xl" />
+          <Reveal delay={0.16} className="relative mx-auto w-full max-w-xl">
+            <div className="absolute -bottom-8 left-8 right-8 h-28 rounded-full bg-[#FF5A36]/20 blur-3xl" />
             <div className="absolute -top-8 right-10 h-40 w-40 rounded-full bg-[#F2E6C9]/10 blur-3xl" />
 
-            <Image
-              src="/images/myron-lizer/myron-hero-orange.jpg"
-              alt="Myron Lizer"
-              width={900}
-              height={900}
-              priority
-              loading="eager"
-              className="relative h-[380px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover shadow-[0_35px_90px_rgba(0,0,0,0.55)] lg:h-[520px]"
-            />
-          </div>
+<Image
+  src="/images/myron-lizer/myron-hero-orange.jpg"
+  alt="Myron Lizer"
+  width={900}
+  height={700}
+  priority
+  loading="eager"
+  className="relative h-[380px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_28%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] lg:h-[520px]"
+/>
+          </Reveal>
         </div>
 
         <CampaignDivider />
       </section>
 
-      <section className="bg-[#F2E6C9] px-5 py-16 text-[#050505]">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="campaign-reveal">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-              Our Commitment
-            </p>
-
-            <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
-              Building a Stronger Navajo Nation
-            </h2>
-
-            <p className="mt-6 max-w-xl text-base leading-8 text-black/75">
-              We are committed to good governance, economic opportunity,
-              community development, and protecting our way of life for
-              generations to come.
-            </p>
-
-            <Link
-              href="/about"
-              className="mt-8 inline-flex rounded border border-[#FF5A36] px-6 py-3 text-sm font-black uppercase text-[#FF5A36] transition hover:-translate-y-1 hover:bg-[#FF5A36] hover:text-white"
-            >
-              Learn More About Myron
-            </Link>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {values.map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <article
-                  key={item.title}
-                  className={`campaign-reveal rounded-2xl border border-[#5A1E17]/20 bg-[#FFF3D6] p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
-                    index === 0
-                      ? "delay-100"
-                      : index === 1
-                      ? "delay-200"
-                      : index === 2
-                      ? "delay-300"
-                      : "delay-400"
-                  }`}
-                >
-                  <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[#5A1E17]">
-                    <Icon className="h-8 w-8 text-[#FF5A36]" />
-                  </div>
-
-                  <h3 className="mt-5 text-sm font-black uppercase text-[#050505]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-6 text-black/65">
-                    {item.text}
-                  </p>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden bg-[#050505] px-5 py-20">
-        <div className="absolute inset-0 opacity-20">
-          <Image
-            src="/images/myron-lizer/hero-dark-texture.png"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover opacity-30"
-          />
-        </div>
-
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-          <div className="campaign-image-reveal relative">
-            <div className="absolute -bottom-6 left-8 h-32 w-32 rounded-full bg-[#FF5A36]/20 blur-3xl" />
-            <Image
-              src="/images/myron-lizer/myron-about-speaking.jpg"
-              alt="Myron Lizer speaking"
-              width={850}
-              height={600}
-              className="relative rounded-3xl border border-[#F2E6C9]/20 object-cover shadow-[0_35px_90px_rgba(0,0,0,0.55)]"
-            />
-          </div>
-
-          <div className="campaign-reveal">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-              A Vision For Tomorrow
-            </p>
-
-            <h2 className="mt-3 text-4xl font-black uppercase leading-tight text-[#FFF3D6] md:text-5xl">
-              Honoring Our Past. Building Our Future.
-            </h2>
-
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#F2E6C9]/80">
-              Our traditions guide us, our values unite us, and our future
-              depends on leadership that understands the needs of Navajo
-              families and communities.
-            </p>
-
-            <div className="mt-8 grid gap-4">
-              {[
-                "Leadership grounded in service and accountability",
-                "Opportunity for Navajo families and small businesses",
-                "Growth that protects culture, land, and future generations",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-xl border border-[#F2E6C9]/15 bg-white/5 p-5 text-sm font-bold text-[#F2E6C9]"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            <Link
-              href="/priorities"
-              className="mt-9 inline-flex rounded bg-[#FF5A36] px-7 py-4 text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.26)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
-            >
-              View Full Priorities
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <section className="bg-[#F2E6C9] px-5 py-20 text-[#050505]">
-        <div className="mx-auto max-w-7xl text-center">
-          <div className="campaign-reveal">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-              Campaign Priorities
-            </p>
+        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <Reveal>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+                About Myron Lizer
+              </p>
+            </Reveal>
 
-            <h2 className="mt-3 text-4xl font-black uppercase md:text-5xl">
-              Leadership • Opportunity • Growth
-            </h2>
+            <Reveal delay={0.08}>
+              <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
+                Rooted In Business, Family, Faith & Service
+              </h2>
+            </Reveal>
 
-            <p className="mx-auto mt-5 max-w-2xl text-black/70">
-              A campaign focused on restoring integrity, strengthening economic
-              opportunity, supporting Navajo families, and building long-term
-              prosperity across the Navajo Nation.
-            </p>
+            <Reveal delay={0.14}>
+              <p className="mt-6 text-lg leading-8 text-black/75">
+                Myron Lizer is a former Vice President of the Navajo Nation,
+                businessman, husband, community servant, and candidate for
+                Navajo Nation President. His leadership background brings
+                together public service, business experience, and a practical
+                understanding of the everyday needs facing Navajo families.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.2}>
+              <p className="mt-6 text-lg leading-8 text-black/75">
+                The full About page shares more of his story, including his
+                public service, business background, family values, faith,
+                community relationships, and vision for a stronger, more
+                self-reliant Navajo Nation.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.26}>
+              <Link
+                href="/about"
+                className="mt-10 inline-flex items-center gap-2 rounded border border-[#FF5A36] px-7 py-4 text-sm font-black uppercase text-[#FF5A36] transition hover:-translate-y-1 hover:bg-[#FF5A36] hover:text-white"
+              >
+                Read About Myron
+                <ArrowRight size={18} />
+              </Link>
+            </Reveal>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-4">
-            {priorities.map((item, index) => {
-              const Icon = item.icon;
+          <Reveal delay={0.14} className="relative">
+            <div className="absolute -bottom-6 left-10 h-40 w-40 rounded-full bg-[#FF5A36]/25 blur-3xl" />
 
-              return (
-                <article
-                  key={item.title}
-                  className={`campaign-reveal rounded-2xl border border-[#5A1E17]/20 bg-[#FFF3D6] p-7 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
-                    index === 0
-                      ? "delay-100"
-                      : index === 1
-                      ? "delay-200"
-                      : index === 2
-                      ? "delay-300"
-                      : "delay-400"
-                  }`}
-                >
-                  <Icon className="h-10 w-10 text-[#FF5A36]" />
-
-                  <h3 className="mt-5 text-lg font-black uppercase text-[#050505]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-6 text-black/65">
-                    {item.text}
-                  </p>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden bg-[#5A1E17] px-5 py-16 text-[#FFF3D6]">
-        <div className="absolute inset-0 opacity-15">
-          <Image
-            src="/images/myron-lizer/hero-dark-texture.png"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-        </div>
-
-        <div className="relative mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-4">
-          <div className="campaign-reveal md:col-span-1">
-            <h2 className="text-3xl font-black uppercase text-[#FF5A36]">
-              Be Part of the Change
-            </h2>
-
-            <p className="mt-3 text-[#F2E6C9]/80">
-              Together, we can build a stronger future for the Navajo Nation.
-            </p>
-          </div>
-
-          <Link
-            href="/get-involved"
-            className="campaign-reveal delay-100 rounded-xl border border-[#F2E6C9]/20 bg-black/25 p-6 text-center transition hover:-translate-y-2 hover:border-[#FF5A36] hover:bg-black/40"
-          >
-            <Users className="mx-auto h-9 w-9 text-[#FF5A36]" />
-            <p className="mt-3 font-black uppercase">Volunteer</p>
-            <p className="text-sm text-[#F2E6C9]/70">Join our team</p>
-          </Link>
-
-          <Link
-            href="/donate"
-            className="campaign-reveal delay-200 rounded-xl border border-[#F2E6C9]/20 bg-black/25 p-6 text-center transition hover:-translate-y-2 hover:border-[#FF5A36] hover:bg-black/40"
-          >
-            <Heart className="mx-auto h-9 w-9 text-[#FF5A36]" />
-            <p className="mt-3 font-black uppercase">Donate</p>
-            <p className="text-sm text-[#F2E6C9]/70">Support our campaign</p>
-          </Link>
-
-          <Link
-            href="/contact"
-            className="campaign-reveal delay-300 rounded-xl border border-[#F2E6C9]/20 bg-black/25 p-6 text-center transition hover:-translate-y-2 hover:border-[#FF5A36] hover:bg-black/40"
-          >
-            <Mail className="mx-auto h-9 w-9 text-[#FF5A36]" />
-            <p className="mt-3 font-black uppercase">Contact</p>
-            <p className="text-sm text-[#F2E6C9]/70">Get in touch</p>
-          </Link>
+            <div className="relative overflow-hidden rounded-3xl border border-[#5A1E17]/20 bg-[#050505]/5 shadow-[0_35px_80px_rgba(0,0,0,0.35)]">
+              <Image
+                src="/images/myron-lizer/myron-wife.jpg"
+                alt="Myron and Dottie Lizer"
+                width={1200}
+                height={800}
+                priority
+                loading="eager"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="h-auto w-full object-contain"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="bg-[#050505] px-5 py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="campaign-reveal">
-            <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-              <div>
-                <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-                  Campaign Announcement
-                </p>
+          <div className="mx-auto max-w-4xl text-center">
+            <Reveal>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+                Campaign Priorities
+              </p>
+            </Reveal>
 
-                <h2 className="mt-2 text-3xl font-black uppercase text-[#FFF3D6] md:text-4xl">
-                  Latest News
-                </h2>
+            <Reveal delay={0.08}>
+              <h2 className="mt-3 text-4xl font-black uppercase leading-tight text-[#FFF3D6] md:text-5xl">
+                Practical Priorities For Navajo Families
+              </h2>
+            </Reveal>
 
-                <p className="mt-4 max-w-3xl text-base leading-7 text-[#F2E6C9]/75">
-                  Myron Lizer announced his candidacy for President of the
-                  Navajo Nation with a message centered on visionary leadership,
-                  economic sovereignty, jobs, infrastructure, integrity, and
-                  long-term prosperity for the Navajo people.
-                </p>
-              </div>
+            <Reveal delay={0.14}>
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F2E6C9]/75">
+                The campaign message centers on economic sovereignty, jobs,
+                infrastructure, water, energy, integrity, and long-term
+                prosperity.
+              </p>
+            </Reveal>
+          </div>
 
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {priorities.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <Reveal key={item.title} delay={index * 0.06}>
+                  <article className="group relative h-full overflow-hidden rounded-3xl border border-[#F2E6C9]/15 bg-white/5 p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/60 hover:bg-white/10 hover:shadow-2xl">
+                    <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
+
+                    <div className="relative grid h-16 w-16 place-items-center rounded-2xl bg-[#5A1E17] shadow-[0_14px_30px_rgba(90,30,23,0.24)]">
+                      <div className="absolute inset-1 rounded-xl border border-[#F2E6C9]/15" />
+                      <Icon className="relative h-8 w-8 text-[#FF5A36]" />
+                    </div>
+
+                    <h3 className="relative mt-6 text-lg font-black uppercase leading-tight text-[#FFF3D6]">
+                      {item.title}
+                    </h3>
+
+                    <p className="relative mt-3 text-sm leading-7 text-[#F2E6C9]/70">
+                      {item.text}
+                    </p>
+                  </article>
+                </Reveal>
+              );
+            })}
+          </div>
+
+          <Reveal delay={0.12}>
+            <div className="mt-12 text-center">
               <Link
-                href="/news"
-                className="text-sm font-black uppercase text-[#FF5A36] transition hover:text-[#F2E6C9]"
+                href="/priorities"
+                className="inline-flex items-center gap-2 rounded bg-[#FF5A36] px-7 py-4 text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.28)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
               >
-                View All News
+                View Full Priorities
+                <ArrowRight size={18} />
               </Link>
             </div>
+          </Reveal>
+        </div>
+      </section>
 
-            <div className="grid gap-5 md:grid-cols-3">
-              {newsArticles.map((article) => (
-                <article
-                  key={article.title}
-                  className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#F2E6C9]/15 bg-white/5 shadow-[0_18px_45px_rgba(0,0,0,0.35)] transition hover:-translate-y-2 hover:border-[#FF5A36]/60"
-                >
-                  <Image
-                    src={article.image}
-                    alt={article.alt}
-                    width={900}
-                    height={450}
-                    className={`h-44 w-full object-cover ${article.imagePosition}`}
-                  />
+      <section className="relative overflow-hidden bg-[#5A1E17] px-5 py-20 text-[#FFF3D6]">
+        <div className="absolute inset-0 opacity-20">
+          <Image
+            src="/images/myron-lizer/hero-dark-texture.png"
+            alt=""
+            fill
+            loading="eager"
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
 
-                  <div className="flex flex-1 flex-col p-5">
-                    <p className="text-xs font-black uppercase tracking-[0.15em] text-[#FF5A36]">
-                      {article.source} • {article.date}
+        <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <Reveal>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+                Message Focus
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.08}>
+              <h2 className="mt-5 text-4xl font-black uppercase leading-tight md:text-5xl">
+                Economic Sovereignty Starts With The Basics
+              </h2>
+            </Reveal>
+
+            <Reveal delay={0.14}>
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-[#F2E6C9]/80">
+                Jobs, infrastructure, water, energy, and accountability are
+                connected. Together, they shape whether families can build,
+                businesses can grow, and future generations can stay rooted in
+                strong Navajo communities.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            {messagePoints.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <Reveal key={item.title} delay={index * 0.06}>
+                  <article className="group h-full rounded-3xl border border-[#F2E6C9]/15 bg-black/25 p-6 transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/60 hover:bg-black/40">
+                    <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[#FF5A36] text-white shadow-[0_12px_30px_rgba(255,90,54,0.28)]">
+                      <Icon size={26} />
+                    </div>
+
+                    <h3 className="text-lg font-black uppercase text-[#FFF3D6]">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-7 text-[#F2E6C9]/70">
+                      {item.text}
                     </p>
+                  </article>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-                    <h3 className="mt-2 text-xl font-black text-[#FFF3D6]">
+      <section className="bg-[#F2E6C9] px-5 py-20 text-[#050505]">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl">
+              <Reveal>
+                <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+                  Latest Public Coverage
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.08}>
+                <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
+                  Campaign News & Public Mentions
+                </h2>
+              </Reveal>
+
+              <Reveal delay={0.14}>
+                <p className="mt-6 text-base leading-8 text-black/70">
+                  Recent public reporting reflects the campaign’s focus on
+                  economic sovereignty, jobs, energy, infrastructure, long-term
+                  prosperity, and restoring integrity.
+                </p>
+              </Reveal>
+            </div>
+
+            <Reveal delay={0.18}>
+              <Link
+                href="/news"
+                className="inline-flex items-center gap-2 rounded border border-[#FF5A36] px-7 py-4 text-sm font-black uppercase text-[#FF5A36] transition hover:-translate-y-1 hover:bg-[#FF5A36] hover:text-white"
+              >
+                View News
+                <ArrowRight size={18} />
+              </Link>
+            </Reveal>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {newsArticles.map((article, index) => (
+              <Reveal key={article.title} delay={index * 0.07}>
+                <article className="group h-full overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/55 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]">
+                  <div className="relative h-56 overflow-hidden">
+                    <Image
+                      src={article.image}
+                      alt={article.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className={`object-cover transition duration-700 group-hover:scale-105 ${article.imagePosition}`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/55 to-transparent" />
+                    <div className="absolute left-5 top-5 rounded-full bg-[#FF5A36] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white">
+                      {article.source}
+                    </div>
+                  </div>
+
+                  <div className="p-7">
+                    <div className="mb-4 flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-[#5A1E17]/55">
+                      <Newspaper size={15} />
+                      <span>{article.date}</span>
+                    </div>
+
+                    <h3 className="text-xl font-black uppercase leading-tight text-[#050505]">
                       {article.title}
                     </h3>
 
-                    <p className="mt-3 flex-1 text-sm leading-6 text-[#F2E6C9]/70">
+                    <p className="mt-4 text-sm leading-7 text-black/65">
                       {article.text}
                     </p>
 
-                    <a
+                    <Link
                       href={article.href}
                       target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-5 inline-flex text-sm font-black uppercase text-[#FF5A36] transition hover:text-[#F2E6C9]"
+                      rel="noreferrer"
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase text-[#FF5A36] transition hover:gap-3"
                     >
-                      Read Article →
-                    </a>
+                      Read Source
+                      <ArrowRight size={17} />
+                    </Link>
                   </div>
                 </article>
-              ))}
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#050505] px-5 py-20 text-[#FFF3D6]">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="relative order-2 lg:order-1">
+            <Reveal>
+              <div className="absolute -bottom-6 right-10 h-40 w-40 rounded-full bg-[#FF5A36]/25 blur-3xl" />
+
+              <Image
+                src="/images/myron-lizer/myron-community-veterans.jpg"
+                alt="Myron Lizer with community members and veterans"
+                width={900}
+                height={700}
+                className="relative h-[440px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_30%] shadow-[0_35px_80px_rgba(0,0,0,0.55)] lg:h-[540px]"
+              />
+            </Reveal>
+          </div>
+
+          <div className="order-1 lg:order-2">
+            <Reveal>
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+                Get Involved
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.08}>
+              <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
+                Help Move The Campaign Forward
+              </h2>
+            </Reveal>
+
+            <Reveal delay={0.14}>
+              <p className="mt-6 text-lg leading-8 text-[#F2E6C9]/78">
+                The campaign is continuing to build its outreach, media,
+                volunteer, and community engagement efforts. Supporters can help
+                by volunteering, sharing updates, attending events, and staying
+                connected as new information is released.
+              </p>
+            </Reveal>
+
+            <div className="mt-8 grid gap-4">
+              {getInvolved.map((item, index) => {
+                const Icon = item.icon;
+
+                return (
+                  <Reveal key={item.title} delay={index * 0.06}>
+                    <Link
+                      href={item.href}
+                      className="group block rounded-2xl border border-[#F2E6C9]/15 bg-white/5 p-5 transition hover:-translate-y-1 hover:border-[#FF5A36]/50 hover:bg-white/10"
+                    >
+                      <div className="flex gap-4">
+                        <div className="mt-1 grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[#FF5A36] text-white shadow-[0_10px_25px_rgba(255,90,54,0.22)]">
+                          <Icon size={22} />
+                        </div>
+
+                        <div>
+                          <h3 className="text-sm font-black uppercase text-[#FFF3D6]">
+                            {item.title}
+                          </h3>
+
+                          <p className="mt-2 text-sm leading-6 text-[#F2E6C9]/68">
+                            {item.text}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -555,54 +572,39 @@ export default function MyronLizerCampaignPage() {
           />
         </div>
 
-        <div className="relative mx-auto max-w-7xl">
-          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-                Upcoming Events
-              </p>
+        <Reveal className="relative mx-auto grid max-w-7xl gap-8 rounded-3xl border border-[#F2E6C9]/15 bg-black/35 p-8 md:grid-cols-[1fr_auto] md:items-center lg:p-10">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+              Join The Movement
+            </p>
 
-              <h2 className="mt-2 text-3xl font-black uppercase text-[#FFF3D6] md:text-4xl">
-                Meet The Campaign
-              </h2>
-            </div>
+            <h2 className="mt-2 text-3xl font-black uppercase text-[#FFF3D6] md:text-4xl">
+              Building A Stronger Future For The Navajo Nation
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-base leading-7 text-[#F2E6C9]/75">
+              Stand with Myron Lizer in support of economic sovereignty,
+              stronger infrastructure, jobs for our people, and leadership with
+              integrity.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
+            <Link
+              href="/get-involved"
+              className="inline-flex items-center justify-center rounded-full bg-[#FF5A36] px-6 py-3 text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.25)] transition hover:bg-[#e94b2c]"
+            >
+              Get Involved
+            </Link>
 
             <Link
-              href="/events"
-              className="text-sm font-black uppercase text-[#FF5A36] transition hover:text-[#F2E6C9]"
+              href="/donate"
+              className="inline-flex items-center justify-center rounded-full border border-[#F2E6C9]/35 px-6 py-3 text-sm font-black uppercase text-[#FFF3D6] transition hover:border-[#FF5A36] hover:text-[#FF5A36]"
             >
-              View All Events
+              Donate
             </Link>
           </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {events.map((event) => (
-              <article
-                key={event.title}
-                className="rounded-2xl border border-[#F2E6C9]/15 bg-black/25 p-6 transition hover:-translate-y-2 hover:border-[#FF5A36]/60 hover:bg-black/40"
-              >
-                <div className="mb-5 inline-flex rounded-xl bg-[#FF5A36] px-4 py-3 text-sm font-black uppercase text-white">
-                  {event.date}
-                </div>
-
-                <h3 className="text-lg font-black uppercase text-[#FFF3D6]">
-                  {event.title}
-                </h3>
-
-                <p className="mt-2 flex items-center gap-2 text-sm text-[#F2E6C9]/70">
-                  <CalendarDays size={16} /> {event.location}
-                </p>
-              </article>
-            ))}
-          </div>
-
-          <Link
-            href="/events"
-            className="mt-8 inline-flex rounded border border-[#F2E6C9]/40 px-6 py-3 text-sm font-black uppercase text-[#FFF3D6] transition hover:-translate-y-1 hover:border-[#FF5A36] hover:text-[#FF5A36]"
-          >
-            View Campaign Events
-          </Link>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

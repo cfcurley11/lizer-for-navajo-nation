@@ -5,7 +5,6 @@ import {
   Award,
   Briefcase,
   Church,
-  GraduationCap,
   HeartHandshake,
   Landmark,
   Store,
@@ -16,7 +15,7 @@ import CampaignDivider from "../components/CampaignDivider";
 export const metadata: Metadata = {
   title: "About Myron Lizer | Myron Lizer for Navajo Nation President",
   description:
-    "Learn more about Myron Lizer, 2026 Navajo Nation President candidate, former Navajo Nation Vice President, businessman, community leader, and advocate for economic sovereignty and long-term prosperity.",
+    "Learn more about Myron Lizer, former Navajo Nation Vice President, businessman, community leader, and 2026 candidate for Navajo Nation President.",
   openGraph: {
     title: "About Myron Lizer | Myron Lizer for Navajo Nation President",
     description:
@@ -29,68 +28,68 @@ const highlights = [
   {
     icon: Award,
     title: "Former Vice President",
-    text: "Served as the 10th Vice President of the Navajo Nation from 2019 to 2023.",
+    text: "Served as Vice President of the Navajo Nation from 2019 to 2023, helping lead through major challenges affecting Navajo families and communities.",
   },
   {
     icon: Store,
-    title: "Business Owner",
-    text: "Owner and manager of four Navajoland Ace Hardware stores, with deep experience in business operations and job creation.",
-  },
-  {
-    icon: Briefcase,
-    title: "Management Experience",
-    text: "Built a career in business development, management, entrepreneurship, and organizational leadership.",
+    title: "Business Experience",
+    text: "Built practical experience in business ownership, management, entrepreneurship, and local job creation.",
   },
   {
     icon: HeartHandshake,
     title: "Community Service",
-    text: "Served through business boards, school boards, ministry, and community-focused efforts.",
-  },
-];
-
-const leadershipPoints = [
-  {
-    icon: Landmark,
-    title: "Public Service",
-    text: "As former Vice President of the Navajo Nation, Myron Lizer brings firsthand experience in tribal government, leadership, and public service.",
-  },
-  {
-    icon: Briefcase,
-    title: "Economic Development",
-    text: "His campaign message emphasizes economic sovereignty, job creation, infrastructure, energy, and long-term prosperity.",
+    text: "His background includes service through business, education, ministry, and community-centered efforts.",
   },
   {
     icon: Users,
-    title: "Relationship Building",
-    text: "His leadership approach is rooted in collaboration, consensus-building, partnerships, and moving projects forward.",
-  },
-  {
-    icon: Church,
-    title: "Faith & Family",
-    text: "His public story includes faith, family, ministry, and community values as important parts of his leadership foundation.",
+    title: "People-Focused Leadership",
+    text: "Believes leadership begins with listening, building trust, working together, and delivering practical results.",
   },
 ];
 
-const aboutTimeline = [
+const foundationCards = [
   {
-    label: "Business Foundation",
-    title: "Entrepreneurship & Management",
-    text: "Myron built a career through business ownership, retail management, and organizational leadership, including work connected to Navajoland Ace Hardware Stores and Lumber Yards.",
+    icon: Briefcase,
+    title: "Business & Jobs",
+    text: "Myron understands the daily realities of running a business, creating jobs, managing teams, and serving local communities.",
   },
   {
-    label: "Community Service",
-    title: "Boards, Ministry & Local Involvement",
-    text: "His background includes service on business boards, private school boards, ministry leadership, and community concerns, including helping found the Window Rock Jaycees charter chapter in the late 1990s.",
+    icon: Landmark,
+    title: "Public Service",
+    text: "As former Vice President, he brings firsthand experience in tribal government, leadership, advocacy, and public responsibility.",
+  },
+  {
+    icon: Church,
+    title: "Faith & Family Values",
+    text: "His public life has been shaped by faith, family, service, and a belief that leadership should be grounded in humility and responsibility.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Community Relationships",
+    text: "His leadership approach is centered on relationships, accountability, collaboration, and respect for the people he serves.",
+  },
+];
+
+const storySections = [
+  {
+    label: "Rooted In Community",
+    title: "A Life Connected To The Navajo People",
+    text: "Myron Lizer’s story is connected to the people, families, businesses, and communities of the Navajo Nation. His experience has taken him through business, public service, ministry, and community work, giving him a practical understanding of the challenges many Navajo families face.",
+  },
+  {
+    label: "Business Background",
+    title: "Understanding Work, Jobs & Local Opportunity",
+    text: "Before serving in elected office, Myron built experience in business ownership, management, accounting, and entrepreneurship. That background continues to shape his focus on economic sovereignty, local jobs, infrastructure, and long-term prosperity.",
   },
   {
     label: "Public Leadership",
-    title: "Vice President of the Navajo Nation",
-    text: "From 2019 to 2023, Myron served as Vice President of the Navajo Nation under President Jonathan Nez, bringing business experience into tribal leadership.",
+    title: "Serving As Vice President Of The Navajo Nation",
+    text: "From 2019 to 2023, Myron served as Vice President of the Navajo Nation. His time in office included work across government, communities, federal advocacy, economic development, infrastructure needs, and the difficult years of the COVID-19 pandemic.",
   },
   {
-    label: "2026 Campaign",
-    title: "Leadership, Opportunity & Growth",
-    text: "His 2026 campaign message focuses on visionary leadership, economic sovereignty, jobs, infrastructure, water, energy, integrity, and long-term prosperity for the Navajo people.",
+    label: "Moving Forward",
+    title: "A Campaign Focused On Practical Results",
+    text: "His campaign is focused on economic sovereignty, jobs, water, energy, infrastructure, integrity, and building a stronger future where Navajo families can live, work, raise children, and prosper at home.",
   },
 ];
 
@@ -126,17 +125,17 @@ export default function AboutPage() {
             </p>
 
             <h1 className="mt-4 max-w-3xl text-5xl font-black uppercase leading-[0.95] text-[#FFF3D6] md:text-6xl lg:text-7xl">
-              Leadership Built Through Service
+              Rooted In Service, Built For Leadership
             </h1>
 
             <div className="mt-6 h-1 w-28 bg-[#FF5A36]" />
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/80">
-              Myron Lizer is a businessman, former Vice President of the Navajo
-              Nation, community leader, and candidate for President of the
-              Navajo Nation. His leadership story is rooted in business,
-              service, faith, family, and a commitment to building long-term
-              opportunity for the Navajo people.
+              Myron Lizer is a former Vice President of the Navajo Nation,
+              businessman, husband, community servant, and candidate for Navajo
+              Nation President. His leadership story is rooted in business,
+              faith, family, service, and a commitment to building opportunity
+              for the Navajo people.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -179,34 +178,31 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-              Biography
+              His Story
             </p>
 
             <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
-              Business, Service & Navajo Leadership
+              Business, Family, Faith & Public Service
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-black/75">
-              Myron Lizer has built his career across business, community
-              service, and public leadership. Before and after serving as Vice
-              President of the Navajo Nation, he remained connected to the
-              practical challenges and opportunities facing Navajo families,
-              communities, and businesses.
+              Myron Lizer has spent his life working across business,
+              community, ministry, and public service. Before serving in tribal
+              leadership, he built practical experience in management,
+              entrepreneurship, accounting, and local business operations.
             </p>
 
             <p className="mt-6 text-lg leading-8 text-black/75">
-              As a business owner and manager, Myron understands the importance
-              of jobs, local enterprise, reliable infrastructure, and economic
-              self-reliance. His campaign message centers on strengthening
-              opportunity, restoring integrity, and building long-term
-              prosperity for the Navajo Nation.
+              That experience matters. Myron understands that Navajo families
+              are looking for more than political talk. They want jobs, working
+              infrastructure, reliable services, stronger communities, and a
+              future where young people can build a good life at home.
             </p>
 
             <p className="mt-6 text-lg leading-8 text-black/75">
-              His background also includes service through boards, ministry,
-              family business growth, and community engagement. These
-              experiences shape a leadership approach focused on relationships,
-              collaboration, accountability, and practical results.
+              His campaign is centered on economic sovereignty, long-term
+              prosperity, water, energy, infrastructure, and restoring integrity
+              to the Office of the President.
             </p>
 
             <Link
@@ -217,17 +213,23 @@ export default function AboutPage() {
             </Link>
           </div>
 
-          <div className="relative">
-            <div className="absolute -bottom-6 left-10 h-40 w-40 rounded-full bg-[#FF5A36]/25 blur-3xl" />
+<div className="relative">
+  <div className="absolute -bottom-6 left-10 h-40 w-40 rounded-full bg-[#FF5A36]/25 blur-3xl" />
 
-            <Image
-              src="/images/myron-lizer/myron-about-speaking.jpg"
-              alt="Myron Lizer speaking at an event"
-              width={900}
-              height={700}
-              className="relative h-[500px] w-full rounded-3xl border border-[#5A1E17]/20 object-cover object-[center_28%] shadow-[0_35px_80px_rgba(0,0,0,0.35)] lg:h-[560px]"
-            />
-          </div>
+  <div className="relative w-full overflow-hidden rounded-3xl border border-[#5A1E17]/20 bg-[#050505]/5 shadow-[0_35px_80px_rgba(0,0,0,0.35)]">
+    <Image
+      src="/images/myron-lizer/myron-wife.jpg"
+      alt="Myron and Dottie Lizer"
+      width={1200}
+      height={800}
+      priority
+      loading="eager"
+      sizes="(min-width: 1024px) 50vw, 100vw"
+      className="h-auto w-full object-contain"
+    />
+  </div>
+</div>
+
         </div>
       </section>
 
@@ -239,12 +241,12 @@ export default function AboutPage() {
             </p>
 
             <h2 className="mt-3 text-4xl font-black uppercase text-[#FFF3D6] md:text-5xl">
-              Experience That Matters
+              Experience That Connects
             </h2>
 
             <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-[#F2E6C9]/70">
-              Myron’s experience reaches across tribal government, business
-              ownership, management, community service, faith, and family.
+              Myron brings together business experience, public leadership,
+              community service, faith, and family values.
             </p>
           </div>
 
@@ -285,15 +287,14 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-black/70">
-              The About page should give voters a clear picture of who Myron is:
-              a businessman, a former tribal executive leader, a community
-              servant, and a candidate focused on practical results for Navajo
-              families.
+              This campaign is about more than a title. It is about practical
+              leadership, trusted relationships, and building a stronger future
+              for Navajo families.
             </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-4">
-            {aboutTimeline.map((item) => (
+            {storySections.map((item) => (
               <article
                 key={item.title}
                 className="rounded-2xl border border-[#5A1E17]/20 bg-[#FFF3D6] p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
@@ -334,18 +335,19 @@ export default function AboutPage() {
             </p>
 
             <h2 className="mt-5 text-4xl font-black uppercase leading-tight md:text-5xl">
-              Relationships. Accountability. Practical Results.
+              Listening First. Leading With Integrity.
             </h2>
 
             <p className="mt-8 max-w-3xl text-lg leading-8 text-[#F2E6C9]/80">
-              Myron’s leadership approach is built around listening,
-              relationship-building, business-minded decision making, and
-              collaboration across communities, government, and partners.
+              Myron believes leadership should be grounded in humility,
+              accountability, and respect for the people. His approach is
+              focused on listening, building trust, working across communities,
+              and delivering practical results.
             </p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
-            {leadershipPoints.map((item) => {
+            {foundationCards.map((item) => {
               const Icon = item.icon;
 
               return (
@@ -367,6 +369,51 @@ export default function AboutPage() {
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F2E6C9] px-5 py-20 text-[#050505]">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="relative order-2 lg:order-1">
+            <div className="absolute -bottom-6 right-10 h-40 w-40 rounded-full bg-[#FF5A36]/25 blur-3xl" />
+
+            <Image
+              src="/images/myron-lizer/myron-hero-orange.jpg"
+              alt="Myron Lizer"
+              width={900}
+              height={700}
+              className="relative h-[440px] w-full rounded-3xl border border-[#5A1E17]/20 object-cover object-[center_30%] shadow-[0_35px_80px_rgba(0,0,0,0.32)] lg:h-[540px]"
+            />
+          </div>
+
+          <div className="order-1 lg:order-2">
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+              Why He Is Running
+            </p>
+
+            <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
+              A Stronger, More Self-Reliant Navajo Nation
+            </h2>
+
+            <p className="mt-6 text-lg leading-8 text-black/75">
+              Myron’s campaign is focused on building a future where the Navajo
+              Nation can create more opportunity from within. That means
+              supporting local businesses, strengthening infrastructure,
+              protecting water and energy priorities, and creating pathways for
+              young people to work and prosper in their own communities.
+            </p>
+
+            <p className="mt-6 text-lg leading-8 text-black/75">
+              He understands that many families are tired of division and empty
+              promises. They want leadership that respects the people, listens
+              to communities, and brings practical experience to the work ahead.
+            </p>
+
+            <p className="mt-6 text-lg leading-8 text-black/75">
+              This campaign is about moving forward with integrity, rebuilding
+              trust, and creating long-term prosperity for the Navajo people.
+            </p>
           </div>
         </div>
       </section>
@@ -394,8 +441,9 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-4 max-w-3xl text-base leading-7 text-[#F2E6C9]/75">
-              Together, we can continue building strong communities, expanding
-              opportunity, and creating a stronger future for the Navajo Nation.
+              Join Myron Lizer in building a stronger, more self-reliant Navajo
+              Nation rooted in integrity, opportunity, and service to the
+              people.
             </p>
           </div>
 
