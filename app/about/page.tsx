@@ -228,33 +228,57 @@ export default function AboutPage() {
 
             <Reveal delay={0.14}>
               <p className="mt-6 text-lg leading-8 text-black/75">
-                Myron Lizer brings 36 years of leadership experience across
-                business, community, ministry, and public service. Before
-                serving in tribal leadership, he built practical experience in
-                management, entrepreneurship, accounting, and local business
-                operations.
+                Myron Lizer served as The Vice President of the Navajo Nation
+                ‘19-‘23. Lizer is owner/manager of 4 Navajoland Ace Hardware
+                Stores. He has managed, owned and supervised in 4 Fortune 500
+                companies having gleaned a rich management acumen from these
+                respective business cultures. Upon helping win an election in
+                what became his first term in tribal leadership, Lizer led,
+                built and maintained strong leadership principles, solidifying
+                relational shaky-ground that has become the current political
+                landscape, to helping garner consensus and moving forward key
+                projects to success! Lizer believes that relationship is key in
+                pressing governmental entities past normal sticking points,
+                working toward sound policy implementation and recommending good
+                judgement in advocacy for willingness to look at new ways of
+                collaboration and partnership.
               </p>
             </Reveal>
 
             <Reveal delay={0.2}>
               <p className="mt-6 text-lg leading-8 text-black/75">
-                That experience matters. Myron understands that Navajo families
-                are looking for more than political talk. They want jobs,
-                working infrastructure, reliable services, stronger
-                communities, and a future where young people can build a good
-                life at home.
+                He brings a wealth of knowledge in relational marketing and
+                business development honed as an entrepreneur and business
+                developer. Lizer served on private business boards, private
+                school boards, guided congregations as a bi-vocational pastor,
+                and participated in community concerns; he founded the Charter
+                Chapter of U.S. Junior Chamber of Commerce (Jaycees) in Window
+                Rock, AZ in the late 1990’s, and growing family business in
+                expansion endeavors with a vision to create more jobs and give
+                opportunity to employees and their growing families.
               </p>
             </Reveal>
 
             <Reveal delay={0.26}>
               <p className="mt-6 text-lg leading-8 text-black/75">
-                His campaign is centered on economic sovereignty, long-term
-                prosperity, water, energy, infrastructure, and restoring
-                integrity to the Office of the President.
+                His wife of 35 years Dottie Lizer, the former Second Lady of
+                the Navajo Nation, serves along her husband in business,
+                ministry, and community, while prioritizing Family— They have
+                three adult children and two grandchildren whom they love with a
+                passion.
               </p>
             </Reveal>
 
             <Reveal delay={0.32}>
+              <p className="mt-6 border-l-4 border-[#FF5A36] pl-5 text-lg font-semibold leading-8 text-black/80">
+                Together, this record reflects 36 years of leadership
+                experience rooted in business, public service, ministry,
+                community engagement, family, and a commitment to creating
+                opportunity for the Navajo people.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.38}>
               <Link
                 href="/news"
                 className="mt-10 inline-flex items-center gap-2 rounded border border-[#FF5A36] px-7 py-4 text-sm font-black uppercase text-[#FF5A36] transition hover:-translate-y-1 hover:bg-[#FF5A36] hover:text-white"
