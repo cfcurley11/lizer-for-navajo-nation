@@ -23,11 +23,11 @@ import Reveal from "./components/Reveal";
 export const metadata: Metadata = {
   title: "Myron Lizer for Navajo Nation President",
   description:
-    "Official campaign website for Myron Lizer, 2026 Navajo Nation President candidate, focused on economic sovereignty, jobs, infrastructure, water, energy, integrity, and long-term prosperity for the Navajo people.",
+    "Official campaign website for Myron Lizer, 2026 Navajo Nation President candidate, bringing 36 years of leadership experience focused on economic sovereignty, jobs, infrastructure, water, energy, integrity, and long-term prosperity for the Navajo people.",
   openGraph: {
     title: "Myron Lizer for Navajo Nation President",
     description:
-      "Economic sovereignty, stronger infrastructure, jobs for our people, and leadership with integrity.",
+      "36 years of leadership experience focused on economic sovereignty, stronger infrastructure, jobs for our people, and leadership with integrity.",
     images: ["/images/myron-lizer/myron-hero-orange.jpg"],
   },
 };
@@ -160,8 +160,8 @@ export default function MyronLizerCampaignPage() {
 
             <Reveal delay={0.08}>
               <h1 className="mt-5 max-w-full break-words text-[3.15rem] font-black uppercase leading-[0.92] tracking-[-0.04em] text-[#FFF3D6] sm:text-6xl lg:text-7xl">
-  Economic Sovereignty. Stronger Communities.
-</h1>
+                Economic Sovereignty. Stronger Communities.
+              </h1>
             </Reveal>
 
             <Reveal delay={0.14}>
@@ -170,10 +170,27 @@ export default function MyronLizerCampaignPage() {
 
             <Reveal delay={0.2}>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/82">
-                Myron Lizer’s campaign is focused on jobs, infrastructure,
-                water, energy, long-term prosperity, and leadership with
-                integrity for the Navajo people.
+                With 36 years of leadership experience, Myron Lizer’s campaign
+                is focused on jobs, infrastructure, water, energy, long-term
+                prosperity, and leadership with integrity for the Navajo people.
               </p>
+            </Reveal>
+
+            <Reveal delay={0.36}>
+              <div className="mt-8 grid max-w-2xl gap-3 rounded-2xl border border-[#F2E6C9]/18 bg-black/35 p-4 shadow-[0_18px_45px_rgba(0,0,0,0.2)] sm:grid-cols-[auto_1fr] sm:items-center">
+                <div className="text-4xl font-black leading-none text-[#FF5A36] sm:text-5xl">
+                  36
+                </div>
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-[#FFF3D6]">
+                    Years In Leadership
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-[#F2E6C9]/72">
+                    Experience shaped through public service, business, family,
+                    faith, and community commitment.
+                  </p>
+                </div>
+              </div>
             </Reveal>
 
             <Reveal delay={0.28}>
@@ -195,25 +212,29 @@ export default function MyronLizerCampaignPage() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.16} className="relative mx-auto w-full max-w-xl overflow-hidden">
+          <Reveal
+            delay={0.16}
+            className="relative mx-auto w-full max-w-xl overflow-hidden"
+          >
             <div className="absolute -bottom-8 left-8 right-8 h-28 rounded-full bg-[#FF5A36]/20 blur-3xl" />
             <div className="absolute -top-8 right-10 h-40 w-40 rounded-full bg-[#F2E6C9]/10 blur-3xl" />
 
-<Image
-  src="/images/myron-lizer/myron-hero-orange.jpg"
-  alt="Myron Lizer"
-  width={900}
-  height={700}
-  priority
-  loading="eager"
- className="relative h-[320px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_28%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] sm:h-[380px] lg:h-[520px]"
-/>
+            <Image
+              src="/images/myron-lizer/myron-hero-orange.jpg"
+              alt="Myron Lizer"
+              width={900}
+              height={700}
+              priority
+              loading="eager"
+              className="relative h-[320px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_28%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] sm:h-[380px] lg:h-[520px]"
+            />
           </Reveal>
         </div>
 
         <CampaignDivider />
       </section>
-            <ElectionCountdown />
+
+      <ElectionCountdown />
 
       <section className="bg-[#F2E6C9] px-5 py-20 text-[#050505]">
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
@@ -234,8 +255,9 @@ export default function MyronLizerCampaignPage() {
               <p className="mt-6 text-lg leading-8 text-black/75">
                 Myron Lizer is a former Vice President of the Navajo Nation,
                 businessman, husband, community servant, and candidate for
-                Navajo Nation President. His leadership background brings
-                together public service, business experience, and a practical
+                Navajo Nation President. He brings 36 years of leadership
+                experience shaped through public service, business, family,
+                faith, and community relationships, with a practical
                 understanding of the everyday needs facing Navajo families.
               </p>
             </Reveal>
@@ -243,9 +265,9 @@ export default function MyronLizerCampaignPage() {
             <Reveal delay={0.2}>
               <p className="mt-6 text-lg leading-8 text-black/75">
                 The full About page shares more of his story, including his
-                public service, business background, family values, faith,
-                community relationships, and vision for a stronger, more
-                self-reliant Navajo Nation.
+                leadership journey, public service, business background, family
+                values, faith, community relationships, and vision for a
+                stronger, more self-reliant Navajo Nation.
               </p>
             </Reveal>
 
@@ -296,9 +318,9 @@ export default function MyronLizerCampaignPage() {
 
             <Reveal delay={0.14}>
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F2E6C9]/75">
-                The campaign message centers on economic sovereignty, jobs,
-                infrastructure, water, energy, integrity, and long-term
-                prosperity.
+                Shaped by 36 years of leadership experience, the campaign
+                message centers on economic sovereignty, jobs, infrastructure,
+                water, energy, integrity, and long-term prosperity.
               </p>
             </Reveal>
           </div>
@@ -373,9 +395,10 @@ export default function MyronLizerCampaignPage() {
             <Reveal delay={0.14}>
               <p className="mt-8 max-w-3xl text-lg leading-8 text-[#F2E6C9]/80">
                 Jobs, infrastructure, water, energy, and accountability are
-                connected. Together, they shape whether families can build,
-                businesses can grow, and future generations can stay rooted in
-                strong Navajo communities.
+                connected. Mr. Lizer’s 36 years in leadership help frame these
+                priorities with a practical understanding of what families,
+                chapters, businesses, and future generations need to stay rooted
+                in strong Navajo communities.
               </p>
             </Reveal>
           </div>
@@ -585,9 +608,9 @@ export default function MyronLizerCampaignPage() {
             </h2>
 
             <p className="mt-4 max-w-3xl text-base leading-7 text-[#F2E6C9]/75">
-              Stand with Myron Lizer in support of economic sovereignty,
-              stronger infrastructure, jobs for our people, and leadership with
-              integrity.
+              Stand with Myron Lizer in support of 36 years of leadership
+              experience, economic sovereignty, stronger infrastructure, jobs
+              for our people, and leadership with integrity.
             </p>
           </div>
 

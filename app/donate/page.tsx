@@ -5,7 +5,6 @@ import {
   ArrowRight,
   CheckCircle,
   CreditCard,
-  Heart,
   Landmark,
   Megaphone,
   ShieldCheck,
@@ -17,11 +16,11 @@ import Reveal from "../components/Reveal";
 export const metadata: Metadata = {
   title: "Donate | Myron Lizer for Navajo Nation President",
   description:
-    "Support Myron Lizer for Navajo Nation President. Direct online donations are forthcoming. Supporters may contact the campaign for contribution information.",
+    "Support Myron Lizer for Navajo Nation President. Online giving is being finalized, and supporters may request contribution information from the campaign.",
   openGraph: {
     title: "Donate | Myron Lizer for Navajo Nation President",
     description:
-      "Direct online donations are forthcoming. Supporters may contact the campaign for contribution information.",
+      "Support the campaign. Online giving is being finalized, and supporters may request contribution information from the campaign.",
     images: ["/images/myron-lizer/myron-about-leadership.jpg"],
   },
 };
@@ -46,8 +45,8 @@ const supportAreas = [
   },
   {
     icon: ShieldCheck,
-    title: "Accountable Support",
-    text: "Donation language, links, and compliance details should be reviewed and approved by the campaign team.",
+    title: "Responsible Support",
+    text: "Help the campaign grow in a responsible way as final contribution details and online giving options are put in place.",
   },
 ];
 
@@ -76,7 +75,7 @@ export default function DonatePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(255,90,54,0.26),transparent_35%)]" />
         </div>
 
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:py-14">
+        <div className="relative mx-auto grid max-w-7xl gap-10 overflow-hidden px-5 py-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:overflow-visible lg:py-14">
           <div>
             <Reveal>
               <Link
@@ -94,7 +93,7 @@ export default function DonatePage() {
             </Reveal>
 
             <Reveal delay={0.12}>
-              <h1 className="mt-4 max-w-3xl text-5xl font-black uppercase leading-[0.95] text-[#FFF3D6] md:text-6xl lg:text-7xl">
+              <h1 className="mt-4 max-w-full break-words text-[2.65rem] font-black uppercase leading-[0.94] tracking-[-0.045em] text-[#FFF3D6] sm:text-6xl sm:tracking-[-0.035em] lg:text-7xl">
                 Donate To Help Move The Campaign Forward
               </h1>
             </Reveal>
@@ -105,9 +104,9 @@ export default function DonatePage() {
 
             <Reveal delay={0.24}>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/80">
-                Direct online donations are forthcoming. Until the campaign
-                activates its official donation system, supporters may contact
-                the campaign to request contribution information.
+                The campaign is preparing its online giving process. Supporters
+                who would like to contribute may request donation information
+                now and receive follow-up from the campaign team.
               </p>
             </Reveal>
 
@@ -117,7 +116,7 @@ export default function DonatePage() {
                   href="#donation-options"
                   className="rounded bg-[#FF5A36] px-7 py-4 text-center text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.32)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
                 >
-                  View Donation Status
+                  View Donation Info
                 </a>
 
                 <Link
@@ -130,7 +129,10 @@ export default function DonatePage() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.16} className="relative mx-auto w-full max-w-xl">
+          <Reveal
+            delay={0.16}
+            className="relative mx-auto w-full max-w-xl overflow-hidden"
+          >
             <div className="absolute -bottom-8 left-8 right-8 h-28 rounded-full bg-[#FF5A36]/20 blur-3xl" />
             <div className="absolute -top-8 right-10 h-40 w-40 rounded-full bg-[#F2E6C9]/10 blur-3xl" />
 
@@ -141,7 +143,7 @@ export default function DonatePage() {
               height={700}
               priority
               loading="eager"
-              className="relative h-[380px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_42%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] lg:h-[520px]"
+              className="relative h-[320px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_42%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] sm:h-[380px] lg:h-[520px]"
             />
           </Reveal>
         </div>
@@ -157,22 +159,22 @@ export default function DonatePage() {
           <div>
             <Reveal>
               <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-                Donation Status
+                Donation Information
               </p>
             </Reveal>
 
             <Reveal delay={0.08}>
               <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
-                Direct Online Donations Are Forthcoming
+                Online Giving Details Are Being Finalized
               </h2>
             </Reveal>
 
             <Reveal delay={0.14}>
               <p className="mt-6 max-w-xl text-base leading-8 text-black/70">
-                The campaign is preparing its official donation process. Once
-                approved, this page will be updated with the official donation
-                platform, contribution instructions, and any required campaign
-                finance language.
+                The campaign is putting the final donation process in place. In
+                the meantime, supporters may request contribution information
+                through the campaign form and receive follow-up from the
+                campaign team.
               </p>
             </Reveal>
 
@@ -181,10 +183,12 @@ export default function DonatePage() {
                 <div className="flex gap-4">
                   <ShieldCheck className="mt-1 h-7 w-7 shrink-0 text-[#FF5A36]" />
                   <p className="text-sm leading-7 text-black/70">
-                    Until direct online donations are active, supporters who
-                    want to contribute should submit their contact information
-                    through the campaign form so the campaign team can provide
-                    approved donation instructions.
+                    Supporters who want to contribute can submit their contact
+                    information through the campaign form and select{" "}
+                    <span className="font-black text-[#050505]">
+                      Donation information
+                    </span>
+                    . The campaign team can then provide the next steps.
                   </p>
                 </div>
               </div>
@@ -200,18 +204,18 @@ export default function DonatePage() {
               </div>
 
               <p className="relative mt-6 text-xs font-black uppercase tracking-[0.22em] text-[#FF5A36]">
-                Payment Card Placeholder
+                Online Giving
               </p>
 
               <h3 className="relative mt-3 text-3xl font-black uppercase leading-tight text-[#050505]">
-                Online Giving Will Be Added Soon
+                Contribution Options Coming Soon
               </h3>
 
               <p className="relative mt-5 text-sm leading-7 text-black/68">
-                Direct donations through this website are not active yet. The
-                campaign is finalizing the approved process for accepting
-                contributions. For now, please use the campaign form to submit
-                your contact information and request donation details.
+                Online giving options are being prepared for supporters who want
+                to help fund campaign outreach, events, voter engagement,
+                communications, and community connection across the Navajo
+                Nation.
               </p>
 
               <div className="relative mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -239,10 +243,8 @@ export default function DonatePage() {
               </Link>
 
               <p className="relative mt-5 text-xs leading-6 text-black/55">
-                This section is a placeholder only. Donation links, contribution
-                limits, eligibility language, reporting language, and
-                disclaimers should be reviewed and approved by the campaign
-                before direct donations are accepted online.
+                Select “Donation information” on the campaign form and the team
+                can follow up with contribution details.
               </p>
             </div>
           </Reveal>

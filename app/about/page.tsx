@@ -19,11 +19,11 @@ import Reveal from "../components/Reveal";
 export const metadata: Metadata = {
   title: "About Myron Lizer | Myron Lizer for Navajo Nation President",
   description:
-    "Learn more about Myron Lizer, former Navajo Nation Vice President, businessman, community leader, husband, and 2026 candidate for Navajo Nation President.",
+    "Learn more about Myron Lizer, former Navajo Nation Vice President, businessman, community leader, husband, and 2026 candidate for Navajo Nation President with 36 years of leadership experience.",
   openGraph: {
     title: "About Myron Lizer | Myron Lizer for Navajo Nation President",
     description:
-      "Former Navajo Nation Vice President, businessman, community servant, and candidate for Navajo Nation President.",
+      "Former Navajo Nation Vice President, businessman, community servant, and candidate for Navajo Nation President with 36 years of leadership experience.",
     images: ["/images/myron-lizer/myron-hero-orange.jpg"],
   },
 };
@@ -46,8 +46,8 @@ const highlights = [
   },
   {
     icon: Users,
-    title: "People-Focused Leadership",
-    text: "Believes leadership begins with listening, building trust, working together, and delivering practical results.",
+    title: "36 Years In Leadership",
+    text: "Brings decades of leadership shaped through business, public service, ministry, family, faith, and community commitment.",
   },
 ];
 
@@ -79,7 +79,7 @@ const storySections = [
     label: "Rooted In Community",
     icon: Users,
     title: "A Life Connected To The Navajo People",
-    text: "Myron Lizer’s story is connected to the people, families, businesses, and communities of the Navajo Nation. His experience across business, public service, ministry, and community work gives him a practical understanding of the challenges many Navajo families face.",
+    text: "Myron Lizer’s story is connected to the people, families, businesses, and communities of the Navajo Nation. His 36 years of leadership across business, public service, ministry, and community work give him a practical understanding of the challenges many Navajo families face.",
   },
   {
     label: "Business Background",
@@ -97,7 +97,7 @@ const storySections = [
     label: "Moving Forward",
     icon: Scale,
     title: "A Campaign Focused On Practical Results",
-    text: "His campaign is focused on economic sovereignty, jobs, water, energy, infrastructure, integrity, and building a stronger future where Navajo families can live, work, raise children, and prosper at home.",
+    text: "His campaign is shaped by 36 years of leadership experience and is focused on economic sovereignty, jobs, water, energy, infrastructure, integrity, and building a stronger future where Navajo families can live, work, raise children, and prosper at home.",
   },
 ];
 
@@ -150,13 +150,30 @@ export default function AboutPage() {
               <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F2E6C9]/80">
                 Myron Lizer is a former Vice President of the Navajo Nation,
                 businessman, husband, community servant, and candidate for
-                Navajo Nation President. His leadership story is rooted in
-                business, faith, family, service, and a commitment to building
-                opportunity for the Navajo people.
+                Navajo Nation President. With 36 years of leadership experience,
+                his story is rooted in business, faith, family, service, and a
+                commitment to building opportunity for the Navajo people.
               </p>
             </Reveal>
 
-            <Reveal delay={0.3}>
+            <Reveal delay={0.27}>
+              <div className="mt-8 grid max-w-2xl gap-3 rounded-2xl border border-[#F2E6C9]/18 bg-black/35 p-4 shadow-[0_18px_45px_rgba(0,0,0,0.2)] sm:grid-cols-[auto_1fr] sm:items-center">
+                <div className="text-4xl font-black leading-none text-[#FF5A36] sm:text-5xl">
+                  36
+                </div>
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-[#FFF3D6]">
+                    Years In Leadership
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-[#F2E6C9]/72">
+                    Experience shaped through business, public service,
+                    ministry, family, faith, and community commitment.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.34}>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/get-involved"
@@ -180,14 +197,14 @@ export default function AboutPage() {
             <div className="absolute -top-8 right-10 h-40 w-40 rounded-full bg-[#F2E6C9]/10 blur-3xl" />
 
             <Image
-  src="/images/myron-lizer/myron-about-leadership.jpg"
-  alt="Myron Lizer leadership portrait"
-  width={900}
-  height={700}
-  priority
-  loading="eager"
-  className="relative h-[380px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_42%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] lg:h-[520px]"
-/>
+              src="/images/myron-lizer/myron-about-leadership.jpg"
+              alt="Myron Lizer leadership portrait"
+              width={900}
+              height={700}
+              priority
+              loading="eager"
+              className="relative h-[380px] w-full rounded-3xl border border-[#F2E6C9]/20 object-cover object-[center_42%] shadow-[0_35px_90px_rgba(0,0,0,0.55)] lg:h-[520px]"
+            />
           </Reveal>
         </div>
 
@@ -211,10 +228,11 @@ export default function AboutPage() {
 
             <Reveal delay={0.14}>
               <p className="mt-6 text-lg leading-8 text-black/75">
-                Myron Lizer has spent his life working across business,
-                community, ministry, and public service. Before serving in
-                tribal leadership, he built practical experience in management,
-                entrepreneurship, accounting, and local business operations.
+                Myron Lizer brings 36 years of leadership experience across
+                business, community, ministry, and public service. Before
+                serving in tribal leadership, he built practical experience in
+                management, entrepreneurship, accounting, and local business
+                operations.
               </p>
             </Reveal>
 
@@ -283,8 +301,9 @@ export default function AboutPage() {
 
             <Reveal delay={0.14}>
               <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-[#F2E6C9]/70">
-                Myron brings together business experience, public leadership,
-                community service, faith, and family values.
+                Myron brings together 36 years of leadership experience shaped
+                by business, public service, community service, faith, and
+                family values.
               </p>
             </Reveal>
           </div>
@@ -335,44 +354,45 @@ export default function AboutPage() {
 
             <Reveal delay={0.14}>
               <p className="mt-6 max-w-3xl text-base leading-8 text-black/70">
-                This campaign is about more than a title. It is about practical
-                leadership, trusted relationships, and building a stronger
-                future for Navajo families.
+                This campaign is about more than a title. It is about 36 years
+                of leadership experience, practical service, trusted
+                relationships, and building a stronger future for Navajo
+                families.
               </p>
             </Reveal>
           </div>
 
-<div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-  {storySections.map((item, index) => {
-    const Icon = item.icon;
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {storySections.map((item, index) => {
+              const Icon = item.icon;
 
-    return (
-      <Reveal key={item.title} delay={index * 0.06}>
-        <article className="group relative h-full overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-7 shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/50 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]">
-          <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
+              return (
+                <Reveal key={item.title} delay={index * 0.06}>
+                  <article className="group relative h-full overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-7 shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/50 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]">
+                    <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
 
-          <div className="relative">
-            <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[#5A1E17] text-[#FF5A36] shadow-[0_14px_30px_rgba(90,30,23,0.22)]">
-              <Icon size={28} />
-            </div>
+                    <div className="relative">
+                      <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[#5A1E17] text-[#FF5A36] shadow-[0_14px_30px_rgba(90,30,23,0.22)]">
+                        <Icon size={28} />
+                      </div>
 
-            <p className="mt-5 text-xs font-black uppercase tracking-[0.22em] text-[#FF5A36]">
-              {item.label}
-            </p>
+                      <p className="mt-5 text-xs font-black uppercase tracking-[0.22em] text-[#FF5A36]">
+                        {item.label}
+                      </p>
+                    </div>
+
+                    <h3 className="relative mt-4 text-xl font-black uppercase leading-tight text-[#050505]">
+                      {item.title}
+                    </h3>
+
+                    <p className="relative mt-4 text-sm leading-7 text-black/65">
+                      {item.text}
+                    </p>
+                  </article>
+                </Reveal>
+              );
+            })}
           </div>
-
-          <h3 className="relative mt-4 text-xl font-black uppercase leading-tight text-[#050505]">
-            {item.title}
-          </h3>
-
-          <p className="relative mt-4 text-sm leading-7 text-black/65">
-            {item.text}
-          </p>
-        </article>
-      </Reveal>
-    );
-  })}
-</div>
         </div>
       </section>
 
@@ -405,9 +425,10 @@ export default function AboutPage() {
             <Reveal delay={0.14}>
               <p className="mt-8 max-w-3xl text-lg leading-8 text-[#F2E6C9]/80">
                 Myron believes leadership should be grounded in humility,
-                accountability, and respect for the people. His approach is
-                focused on listening, building trust, working across
-                communities, and delivering practical results.
+                accountability, and respect for the people. His 36 years in
+                leadership have shaped an approach focused on listening,
+                building trust, working across communities, and delivering
+                practical results.
               </p>
             </Reveal>
           </div>
@@ -443,13 +464,13 @@ export default function AboutPage() {
           <Reveal className="relative order-2 lg:order-1">
             <div className="absolute -bottom-6 right-10 h-40 w-40 rounded-full bg-[#FF5A36]/25 blur-3xl" />
 
-<Image
-  src="/images/myron-lizer/myron-about-speaking.jpg"
-  alt="Myron Lizer speaking at an event"
-  width={900}
-  height={700}
-  className="relative h-[440px] w-full rounded-3xl border border-[#5A1E17]/20 object-cover object-[center_28%] shadow-[0_35px_80px_rgba(0,0,0,0.32)] lg:h-[540px]"
-/>
+            <Image
+              src="/images/myron-lizer/myron-about-speaking.jpg"
+              alt="Myron Lizer speaking at an event"
+              width={900}
+              height={700}
+              className="relative h-[440px] w-full rounded-3xl border border-[#5A1E17]/20 object-cover object-[center_28%] shadow-[0_35px_80px_rgba(0,0,0,0.32)] lg:h-[540px]"
+            />
           </Reveal>
 
           <div className="order-1 lg:order-2">
@@ -479,8 +500,8 @@ export default function AboutPage() {
               <p className="mt-6 text-lg leading-8 text-black/75">
                 He understands that many families are tired of division and
                 empty promises. They want leadership that respects the people,
-                listens to communities, and brings practical experience to the
-                work ahead.
+                listens to communities, and brings 36 years of practical
+                leadership experience to the work ahead.
               </p>
             </Reveal>
 
@@ -518,8 +539,8 @@ export default function AboutPage() {
 
             <p className="mt-4 max-w-3xl text-base leading-7 text-[#F2E6C9]/75">
               Join Myron Lizer in building a stronger, more self-reliant Navajo
-              Nation rooted in integrity, opportunity, and service to the
-              people.
+              Nation rooted in 36 years of leadership experience, integrity,
+              opportunity, and service to the people.
             </p>
           </div>
 
