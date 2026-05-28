@@ -5,7 +5,6 @@ import {
   ArrowRight,
   CalendarDays,
   CheckCircle2,
-  Clock,
   MapPin,
   Megaphone,
   Radio,
@@ -30,10 +29,22 @@ export const metadata: Metadata = {
 const featuredEvents = [
   {
     status: "Pending Confirmation",
+    title: "Interview with Cal Nez",
+    eventType: "Live Interview",
+    location: "Cal Nez YouTube Channel",
+    date: "Thursday, May 28, 2026",
+    time: "2:00 PM MDT",
+    description:
+      "Myron Lizer is scheduled to be interviewed live by Cal Nez, a prominent reporter and community advocate. Viewers may watch the interview through the official livestream link.",
+    linkLabel: "Watch Live Interview",
+    linkHref: "https://www.youtube.com/live/ZP-IJ0GcTx8?si=0VALtGicuzNrixPr",
+  },
+  {
+    status: "Pending Confirmation",
     title: "Navajo Nation PRCA Pro Rodeo",
     eventType: "Public Meet & Greet",
     location: "Window Rock Fairgrounds Rodeo Arena",
-    date: "Friday, May 29 – Sunday, May 31",
+    date: "May 29-31, 2026",
     time: "Time To Be Announced",
     description:
       "Myron Lizer is scheduled to meet and greet members of the public during the Navajo Nation PRCA Pro Rodeo weekend.",
@@ -43,20 +54,10 @@ const featuredEvents = [
     title: "Navajo Treaty Day",
     eventType: "Community Appearance",
     location: "Fort Defiance, Arizona",
-    date: "Monday, June 1",
+    date: "Monday, June 1, 2026",
     time: "Time To Be Announced",
     description:
       "Myron Lizer is scheduled to be set up in Fort Defiance, Arizona, for Navajo Treaty Day. Additional location details will be announced once confirmed.",
-  },
-  {
-    status: "Pending Confirmation",
-    title: "Interview with Cal Nez",
-    eventType: "Virtual / Online Interview",
-    location: "Virtual / Online",
-    date: "Thursday, June 4",
-    time: "2:00 PM MDT",
-    description:
-      "Myron Lizer is scheduled to be interviewed by Cal Nez. Online viewing or listening details will be shared once confirmed.",
   },
 ];
 
@@ -256,23 +257,23 @@ export default function EventsPage() {
             </Reveal>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid items-stretch gap-6 lg:grid-cols-3">
             {featuredEvents.map((event, index) => (
               <Reveal key={`${event.title}-${event.date}`} delay={index * 0.06}>
-                <article className="group relative h-full overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-7 shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/50 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]">
+                <article className="group relative flex h-full min-h-[640px] flex-col overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-7 shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/50 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]">
                   <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
 
                   <div className="relative grid h-14 w-14 place-items-center rounded-2xl bg-[#5A1E17] text-[#FF5A36] shadow-[0_14px_30px_rgba(90,30,23,0.22)]">
                     <MapPin size={28} />
                   </div>
 
-                  <p className="relative mt-5 inline-flex rounded-full bg-[#FF5A36] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_10px_25px_rgba(255,90,54,0.22)]">
+                  <p className="relative mt-5 inline-flex w-fit rounded-full bg-[#FF5A36] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_10px_25px_rgba(255,90,54,0.22)]">
                     {event.status}
                   </p>
 
-                  <h3 className="relative mt-5 min-h-[72px] text-2xl font-black uppercase leading-tight text-[#050505]">
-  {event.title}
-</h3>
+                  <h3 className="relative mt-5 min-h-[84px] text-2xl font-black uppercase leading-tight text-[#050505]">
+                    {event.title}
+                  </h3>
 
                   <div className="relative mt-6 grid gap-3">
                     <div className="rounded-2xl border border-[#5A1E17]/12 bg-white/45 p-4">
@@ -284,7 +285,7 @@ export default function EventsPage() {
                       </p>
                     </div>
 
-                    <div className="rounded-2xl border border-[#5A1E17]/12 bg-white/45 p-4">
+                    <div className="min-h-[70px] rounded-2xl border border-[#5A1E17]/12 bg-white/45 p-4">
                       <p className="text-xs font-black uppercase tracking-[0.16em] text-[#5A1E17]/50">
                         Location
                       </p>
@@ -294,7 +295,7 @@ export default function EventsPage() {
                     </div>
 
                     <div className="grid gap-3 sm:grid-cols-2">
-                      <div className="rounded-2xl border border-[#5A1E17]/12 bg-white/45 p-4">
+                      <div className="min-h-[92px] rounded-2xl border border-[#5A1E17]/12 bg-white/45 p-4">
                         <p className="text-xs font-black uppercase tracking-[0.16em] text-[#5A1E17]/50">
                           Date
                         </p>
@@ -303,7 +304,7 @@ export default function EventsPage() {
                         </p>
                       </div>
 
-                      <div className="rounded-2xl border border-[#5A1E17]/12 bg-white/45 p-4">
+                      <div className="min-h-[92px] rounded-2xl border border-[#5A1E17]/12 bg-white/45 p-4">
                         <p className="text-xs font-black uppercase tracking-[0.16em] text-[#5A1E17]/50">
                           Time
                         </p>
@@ -314,9 +315,23 @@ export default function EventsPage() {
                     </div>
                   </div>
 
-                  <p className="relative mt-auto pt-6 text-sm leading-7 text-black/68">
-  {event.description}
-</p>
+                  <p className="relative pt-6 text-sm leading-7 text-black/68">
+                    {event.description}
+                  </p>
+
+                  {event.linkHref && event.linkLabel ? (
+                    <a
+                      href={event.linkHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-[#FF5A36] px-5 py-3 text-center text-xs font-black uppercase tracking-[0.14em] text-white shadow-[0_12px_28px_rgba(255,90,54,0.22)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
+                    >
+                      {event.linkLabel}
+                      <ArrowRight size={16} />
+                    </a>
+                  ) : (
+                    <div className="mt-auto" />
+                  )}
                 </article>
               </Reveal>
             ))}
@@ -341,78 +356,83 @@ export default function EventsPage() {
 
             <Reveal delay={0.14}>
               <p className="mt-5 max-w-3xl text-base leading-8 text-[#F2E6C9]/75">
-                Review upcoming public forums, event flyers, broadcast
-                information, and opportunities to hear directly from the
-                candidates.
+                Upcoming public forums, event flyers, broadcast information, and
+                opportunities to hear directly from the candidates.
               </p>
             </Reveal>
           </div>
 
-          <div className="grid gap-7 lg:grid-cols-2">
+          <div className="grid items-stretch gap-7 lg:grid-cols-2">
             {forumFlyers.map((forum, index) => (
               <Reveal key={forum.title} delay={index * 0.08}>
-                <article className="group overflow-hidden rounded-3xl border border-[#F2E6C9]/15 bg-[#0B0B0B] shadow-[0_28px_70px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/60">
-                  <div className="p-6 pb-4 sm:p-7 sm:pb-5">
-                    <p className="inline-flex rounded-full bg-[#FF5A36] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_10px_25px_rgba(255,90,54,0.22)]">
+                <article className="group flex h-full min-h-[720px] flex-col overflow-hidden rounded-3xl border border-[#F2E6C9]/15 bg-[#0B0B0B] shadow-[0_28px_70px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/60">
+<div className="relative bg-[#0B0B0B]">
+  <div className="relative mx-auto flex h-[300px] items-start justify-center overflow-hidden bg-[#0B0B0B] sm:h-[340px] lg:h-[360px]">
+    <Image
+      src={forum.image}
+      alt={forum.title}
+      width={1200}
+      height={1500}
+      sizes="(min-width: 1024px) 50vw, 100vw"
+      className="block h-full w-full object-cover object-top opacity-95 transition duration-500 group-hover:scale-[1.03]"
+    />
+
+    <div className="pointer-events-none absolute inset-x-0 bottom-[-1px] h-28 bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B]/85 to-transparent" />
+  </div>
+</div>
+
+                  <div className="relative z-10 -mt-px flex flex-1 flex-col bg-[#0B0B0B] p-6 sm:p-7">
+                    <p className="inline-flex w-fit rounded-full bg-[#FF5A36] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white shadow-[0_10px_25px_rgba(255,90,54,0.22)]">
                       {forum.status}
                     </p>
 
-                    <h3 className="mt-4 text-2xl font-black uppercase leading-tight text-[#FFF3D6] sm:text-3xl">
+                    <p className="mt-6 text-sm font-black uppercase tracking-[0.22em] text-[#F2E6C9]/50">
+                      Featured Forum
+                    </p>
+
+                    <h3 className="mt-3 min-h-[76px] text-2xl font-black uppercase leading-tight text-[#FFF3D6] sm:text-3xl">
                       {forum.title}
                     </h3>
 
                     <p className="mt-2 text-xs font-black uppercase tracking-[0.2em] text-[#FF5A36] sm:text-sm">
                       {forum.subtitle}
                     </p>
-                  </div>
 
-                  <div className="relative mx-4 overflow-hidden rounded-2xl bg-black sm:mx-7">
-                    <Image
-                      src={forum.image}
-                      alt={forum.title}
-                      width={1200}
-                      height={1500}
-                      sizes="(min-width: 1024px) 50vw, 100vw"
-                      className="max-h-[360px] w-full object-contain object-top transition duration-500 group-hover:scale-[1.02]"
-                    />
+                    <div className="mt-6 grid gap-3">
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        <div className="rounded-2xl border border-[#F2E6C9]/12 bg-black/30 p-4">
+                          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F2E6C9]/45">
+                            Date
+                          </p>
+                          <p className="mt-1 text-sm font-bold leading-6 text-[#F2E6C9]/80">
+                            {forum.date}
+                          </p>
+                        </div>
 
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B]/65 to-transparent" />
-                  </div>
-
-                  <div className="grid gap-3 p-6 pt-5 sm:p-7 sm:pt-5">
-                    <div className="grid gap-3 sm:grid-cols-2">
-                      <div className="rounded-2xl border border-[#F2E6C9]/12 bg-black/30 p-4">
-                        <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F2E6C9]/45">
-                          Date
-                        </p>
-                        <p className="mt-1 text-sm font-bold leading-6 text-[#F2E6C9]/80">
-                          {forum.date}
-                        </p>
+                        <div className="rounded-2xl border border-[#F2E6C9]/12 bg-black/30 p-4">
+                          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F2E6C9]/45">
+                            Time
+                          </p>
+                          <p className="mt-1 text-sm font-bold leading-6 text-[#F2E6C9]/80">
+                            {forum.time}
+                          </p>
+                        </div>
                       </div>
 
                       <div className="rounded-2xl border border-[#F2E6C9]/12 bg-black/30 p-4">
                         <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F2E6C9]/45">
-                          Time
+                          Location
                         </p>
                         <p className="mt-1 text-sm font-bold leading-6 text-[#F2E6C9]/80">
-                          {forum.time}
+                          {forum.location}
+                        </p>
+                        <p className="mt-1 text-sm leading-6 text-[#F2E6C9]/60">
+                          {forum.address}
                         </p>
                       </div>
                     </div>
 
-                    <div className="rounded-2xl border border-[#F2E6C9]/12 bg-black/30 p-4">
-                      <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F2E6C9]/45">
-                        Location
-                      </p>
-                      <p className="mt-1 text-sm font-bold leading-6 text-[#F2E6C9]/80">
-                        {forum.location}
-                      </p>
-                      <p className="mt-1 text-sm leading-6 text-[#F2E6C9]/60">
-                        {forum.address}
-                      </p>
-                    </div>
-
-                    <p className="text-sm leading-7 text-[#F2E6C9]/70">
+                    <p className="mt-auto pt-6 text-sm leading-7 text-[#F2E6C9]/70">
                       {forum.description}
                     </p>
                   </div>
@@ -487,68 +507,68 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="bg-[#F2E6C9] px-5 py-20 text-[#050505]">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div>
-            <Reveal>
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
-                Campaign Notes
+<section className="bg-[#F2E6C9] px-5 py-20 text-[#050505]">
+  <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+    <div>
+      <Reveal>
+        <p className="text-sm font-black uppercase tracking-[0.25em] text-[#FF5A36]">
+          Campaign Notes
+        </p>
+      </Reveal>
+
+      <Reveal delay={0.08}>
+        <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
+          Stay Connected With The Campaign
+        </h2>
+      </Reveal>
+
+      <Reveal delay={0.14}>
+        <p className="mt-6 max-w-xl text-base leading-8 text-black/70">
+          Events are an important opportunity for voters to hear directly from
+          candidates, ask questions, and stay informed. The campaign will
+          continue sharing public appearances, forums, interviews, and community
+          updates on this page.
+        </p>
+      </Reveal>
+
+      <Reveal delay={0.2}>
+        <Link
+          href="/get-involved"
+          className="mt-8 inline-flex items-center gap-2 rounded bg-[#FF5A36] px-7 py-4 text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.25)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
+        >
+          Get Involved
+          <ArrowRight size={18} />
+        </Link>
+      </Reveal>
+    </div>
+
+    <div className="grid gap-5 md:grid-cols-3">
+      {campaignNotes.map((note, index) => {
+        const Icon = note.icon;
+
+        return (
+          <Reveal key={note.title} delay={index * 0.06}>
+            <article className="group relative h-full overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-7 shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/50 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]">
+              <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
+
+              <div className="relative grid h-14 w-14 place-items-center rounded-2xl bg-[#5A1E17] text-[#FF5A36] shadow-[0_14px_30px_rgba(90,30,23,0.22)]">
+                <Icon size={28} />
+              </div>
+
+              <h3 className="relative mt-6 min-h-[52px] text-lg font-black uppercase leading-tight text-[#050505]">
+                {note.title}
+              </h3>
+
+              <p className="relative mt-4 text-sm leading-7 text-black/65">
+                {note.text}
               </p>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <h2 className="mt-3 text-4xl font-black uppercase leading-tight md:text-5xl">
-                Stay Connected With The Campaign
-              </h2>
-            </Reveal>
-
-            <Reveal delay={0.14}>
-              <p className="mt-6 max-w-xl text-base leading-8 text-black/70">
-                Events are an important opportunity for voters to hear directly
-                from candidates, ask questions, and stay informed. The campaign
-                will continue sharing public appearances, forums, interviews,
-                and community updates on this page.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.2}>
-              <Link
-                href="/get-involved"
-                className="mt-8 inline-flex items-center gap-2 rounded bg-[#FF5A36] px-7 py-4 text-sm font-black uppercase text-white shadow-[0_12px_35px_rgba(255,90,54,0.25)] transition hover:-translate-y-1 hover:bg-[#e94b2c]"
-              >
-                Get Involved
-                <ArrowRight size={18} />
-              </Link>
-            </Reveal>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {campaignNotes.map((note, index) => {
-              const Icon = note.icon;
-
-              return (
-                <Reveal key={note.title} delay={index * 0.06}>
-                  <article className="group relative flex h-full min-h-[590px] flex-col overflow-hidden rounded-3xl border border-[#5A1E17]/15 bg-[#FFF3D6] p-7 shadow-[0_18px_45px_rgba(5,5,5,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#FF5A36]/50 hover:shadow-[0_28px_70px_rgba(5,5,5,0.18)]">
-                    <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#FF5A36]/10 blur-2xl transition group-hover:bg-[#FF5A36]/20" />
-
-                    <div className="relative grid h-14 w-14 place-items-center rounded-2xl bg-[#5A1E17] text-[#FF5A36] shadow-[0_14px_30px_rgba(90,30,23,0.22)]">
-                      <Icon size={28} />
-                    </div>
-
-                    <h3 className="relative mt-6 text-lg font-black uppercase leading-tight text-[#050505]">
-                      {note.title}
-                    </h3>
-
-                    <p className="relative mt-4 text-sm leading-7 text-black/65">
-                      {note.text}
-                    </p>
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+            </article>
+          </Reveal>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <section className="relative overflow-hidden bg-[#050505] px-5 py-16 text-[#FFF3D6]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,90,54,0.18),transparent_32%)]" />
