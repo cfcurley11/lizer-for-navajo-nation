@@ -7,12 +7,14 @@ const campaignLinks = [
   { label: "Priorities", href: "/priorities" },
   { label: "News", href: "/news" },
   { label: "Events", href: "/events" },
+  { label: "Watch", href: "/watch" },
   { label: "Get Involved", href: "/get-involved" },
 ];
 
 const actionLinks = [
   { label: "Donate", href: "/donate" },
   { label: "Volunteer", href: "/get-involved" },
+  { label: "Watch Videos", href: "/watch" },
   { label: "Latest News", href: "/news" },
   { label: "Upcoming Events", href: "/events" },
 ];
@@ -108,8 +110,8 @@ export default function CampaignFooter() {
                 Stay connected with the campaign.
               </p>
               <p className="mt-2 text-sm leading-6 text-[#f7ecd2]/65">
-                Follow updates, announcements, events, and opportunities to get
-                involved.
+                Follow updates, announcements, events, videos, and opportunities
+                to get involved.
               </p>
             </div>
           </div>

@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/priorities",
     "/news",
     "/events",
+    "/watch",
     "/get-involved",
     "/donate",
     "/contact",
@@ -18,7 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
+    changeFrequency:
+      route === "" || route === "/news" || route === "/events" || route === "/watch"
+        ? "weekly"
+        : "monthly",
     priority:
       route === ""
         ? 1
@@ -26,8 +30,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ? 0.9
           : route === "/get-involved"
             ? 0.9
-            : route === "/donate"
-              ? 0.8
-              : 0.7,
+            : route === "/watch"
+              ? 0.85
+              : route === "/donate"
+                ? 0.8
+                : 0.7,
   }));
 }
