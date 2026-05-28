@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  ArrowRight,
   CalendarDays,
   Megaphone,
   PlayCircle,
@@ -27,15 +26,23 @@ export const metadata: Metadata = {
 };
 
 const latestVideo = {
-  title: "Can Business Leadership Save the Navajo Nation?",
+  title: "Can Business Leadership Save The Navajo Nation?",
   eyebrow: "Latest Campaign Video",
   youtubeId: "P7Wr3k50MGY",
   description:
     "Hear directly from Myron Lizer as he shares his message, leadership vision, and commitment to the future of the Navajo Nation.",
-  date: "Featured Campaign Video",
+  date: "NavConPatriot • Featured Interview",
 };
 
 const videos = [
+  {
+    title: "Navajo Nation Outreach: Christians In Politics",
+    eyebrow: "Campaign Interview",
+    youtubeId: "fAyHuQoZRmo",
+    description:
+      "Myron Lizer joins OvercomersTV.Live for a Navajo Nation outreach interview discussing faith, leadership, Christians in politics, and his 2026 run for Navajo Nation President.",
+    date: "OvercomersTV.Live • Episode 027",
+  },
   latestVideo,
 ];
 
@@ -267,7 +274,7 @@ export default function WatchPage() {
               </Reveal>
             ))}
 
-            <Reveal delay={0.08}>
+            <Reveal delay={0.12}>
               <article className="flex h-full min-h-[420px] flex-col justify-center rounded-3xl border border-dashed border-black/20 bg-[#FFF3D6]/50 p-8 text-center shadow-[0_24px_70px_rgba(0,0,0,0.08)]">
                 <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#6F1711] text-[#FF5A36]">
                   <CalendarDays className="h-7 w-7" />
